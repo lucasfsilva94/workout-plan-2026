@@ -1,4 +1,4 @@
-<h1 align="center"><img src="icon.svg" alt="Workout Plan 2026 Logo" width="45" height="45" align="middle" /> Workout Plan 2026</h1>
+<h1 align="center"><img src="icon.svg" alt="Workout Plan 2026 Logo" width="45" height="45" align="middle" style="vertical-align: middle; margin-right: 10px;" /> Workout Plan 2026</h1>
 
 <p align="center">
     <img alt="workout-plan-mockup" src="workout-plan-mockup.png" width="700"/>
