@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="workout-plan-screenshot" src="workout-plan-screenshot.png" width="700"/>
+    <img alt="workout-plan-mockup" src="workout-plan-mockup.png" width="700"/>
 </p>
 
 <div align="center">

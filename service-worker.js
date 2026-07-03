@@ -1,4 +1,4 @@
-const CACHE_NAME = "treino-app-v11";
+const CACHE_NAME = "treino-app-v12";
 const ASSETS = [
   "./index.html",
   "./manifest.json",

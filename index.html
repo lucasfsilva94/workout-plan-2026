@@ -716,6 +716,101 @@ footer p{font-size:11px;color:var(--mist);font-family:var(--font-mono);margin:0;
   0%, 100% { d: path('M 70,81 L 110,81'); }
   50% { d: path('M 70,81 L 70,41'); }
 }
+
+/* Custom Gym Machine Animations */
+.mach-press-arm { animation: anim-mach-press-arm 2.4s infinite ease-in-out; }
+.mach-press-handle { animation: anim-mach-press-handle 2.4s infinite ease-in-out; }
+
+@keyframes anim-mach-press-arm {
+  0%, 100% { d: path('M 48,45 L 75,45'); }
+  50% { d: path('M 48,45 L 58,45'); }
+}
+@keyframes anim-mach-press-handle {
+  0%, 100% { x1: 75px; x2: 75px; }
+  50% { x1: 58px; x2: 58px; }
+}
+
+.pulldown-arms { animation: anim-pulldown-arms 2.4s infinite ease-in-out; }
+.pulldown-bar { animation: anim-pulldown-bar 2.4s infinite ease-in-out; }
+
+@keyframes anim-pulldown-arms {
+  0%, 100% { d: path('M 45,55 L 35,25 M 45,55 L 55,25'); }
+  50% { d: path('M 45,55 L 35,45 M 45,55 L 55,45'); }
+}
+@keyframes anim-pulldown-bar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
+.rower-torso { animation: anim-rower-torso 2.4s infinite ease-in-out; }
+.rower-arms { animation: anim-rower-arms 2.4s infinite ease-in-out; }
+.rower-handle { animation: anim-rower-handle 2.4s infinite ease-in-out; }
+.rower-cable { animation: anim-rower-cable 2.4s infinite ease-in-out; }
+
+@keyframes anim-rower-torso {
+  0%, 100% { d: path('M 48,51 L 45,80'); }
+  50% { d: path('M 40,51 L 45,80'); }
+}
+@keyframes anim-rower-arms {
+  0%, 100% { d: path('M 48,55 L 75,60'); }
+  50% { d: path('M 40,55 L 52,60'); }
+}
+@keyframes anim-rower-handle {
+  0%, 100% { cx: 75px; cy: 60px; }
+  50% { cx: 52px; cy: 60px; }
+}
+@keyframes anim-rower-cable {
+  0%, 100% { x2: 75px; }
+  50% { x2: 52px; }
+}
+
+.legpress-legs { animation: anim-legpress-legs 2.4s infinite ease-in-out; }
+.legpress-plate-g { animation: anim-legpress-plate 2.4s infinite ease-in-out; }
+
+@keyframes anim-legpress-legs {
+  0%, 100% { d: path('M 35,72 L 65,55 L 85,35'); }
+  50% { d: path('M 35,72 L 48,58 L 65,45'); }
+}
+@keyframes anim-legpress-plate {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 10px); }
+}
+
+.leg-ext-shin { animation: anim-leg-ext-shin 2.4s infinite ease-in-out; }
+.leg-ext-pad { animation: anim-leg-ext-pad 2.4s infinite ease-in-out; }
+
+@keyframes anim-leg-ext-shin {
+  0%, 100% { d: path('M 60,80 L 60,110'); }
+  50% { d: path('M 60,80 L 90,80'); }
+}
+@keyframes anim-leg-ext-pad {
+  0%, 100% { cx: 60px; cy: 107px; }
+  50% { cx: 87px; cy: 80px; }
+}
+
+.leg-curl-shin { animation: anim-leg-curl-shin 2.4s infinite ease-in-out; }
+.leg-curl-pad { animation: anim-leg-curl-pad 2.4s infinite ease-in-out; }
+
+@keyframes anim-leg-curl-shin {
+  0%, 100% { d: path('M 60,80 L 90,80'); }
+  50% { d: path('M 60,80 L 60,110'); }
+}
+@keyframes anim-leg-curl-pad {
+  0%, 100% { cx: 87px; cy: 80px; }
+  50% { cx: 60px; cy: 107px; }
+}
+
+.mach-shpress-arms { animation: anim-mach-shpress-arms 2.4s infinite ease-in-out; }
+.mach-shpress-bar { animation: anim-mach-shpress-bar 2.4s infinite ease-in-out; }
+
+@keyframes anim-mach-shpress-arms {
+  0%, 100% { d: path('M 50,65 L 65,45'); }
+  50% { d: path('M 50,65 L 65,20'); }
+}
+@keyframes anim-mach-shpress-bar {
+  0%, 100% { y1: 45px; y2: 45px; x1: 55px; x2: 75px; }
+  50% { y1: 20px; y2: 20px; x1: 55px; x2: 75px; }
+}
 </style>
 </head>
 <body>
@@ -919,7 +1014,7 @@ const EXERCISE_DETAILS = {
     exec: "Empurre as manoplas para a frente estendendo os braços de forma explosiva, mas controlada. Retorne lentamente até que as manoplas quase toquem o peito.",
     tips: "Mantenha as escápulas retraídas no banco durante todo o movimento e os ombros baixos.",
     errors: "Projetar os ombros para a frente no final do empurrão tirando as costas do encosto.",
-    youtube: "FPTjTshb7Q0",
+    youtube: "4sZEwyKtsdw",
     category: "horizontal-press"
   },
   "Supino Inclinado na Máquina": {
@@ -928,7 +1023,7 @@ const EXERCISE_DETAILS = {
     exec: "Segure as manoplas firmemente e empurre o peso para cima seguindo a guia articulada da máquina. Retorne de forma lenta.",
     tips: "Mantenha o foco na contração das fibras superiores do peitoral e empurre com os cotovelos alinhados.",
     errors: "Não apoiar completamente a lombar ou a cabeça durante a execução.",
-    youtube: "P2r-16o-xM0",
+    youtube: "",
     category: "horizontal-press"
   },
   "Desenvolvimento na Máquina": {
@@ -937,7 +1032,7 @@ const EXERCISE_DETAILS = {
     exec: "Empurre o peso para cima verticalmente até a extensão quase completa dos braços. Desça de volta de maneira controlada.",
     tips: "Mantenha os cotovelos debaixo dos punhos e evite estender totalmente o cotovelo no topo para manter a tensão.",
     errors: "Arquear excessivamente a coluna lombar para compensar cargas altas.",
-    youtube: "5z68b2k9aP4",
+    youtube: "",
     category: "vertical-press"
   },
   "Elevação Lateral na Máquina": {
@@ -946,7 +1041,7 @@ const EXERCISE_DETAILS = {
     exec: "Eleve os braços para fora e para cima até que fiquem paralelos ao solo. Desça controlando o retorno do peso.",
     tips: "Mantenha o pescoço e trapézio relaxados, concentrando a força na lateral dos ombros.",
     errors: "Encolher os ombros no início do movimento ou usar impulso para subir.",
-    youtube: "mD26d9z6_n8",
+    youtube: "",
     category: "shoulder-fly"
   },
   "Tríceps no Pulley": {
@@ -955,7 +1050,7 @@ const EXERCISE_DETAILS = {
     exec: "Estenda os braços para baixo empurrando a barra/corda até a extensão total. Retorne devagar até a altura do peito.",
     tips: "Mantenha os cotovelos fixos ao lado do corpo; apenas os antebraços devem se movimentar.",
     errors: "Mover os cotovelos para a frente e para trás ou inclinar o corpo sobre a barra.",
-    youtube: "kY32J67-B9I",
+    youtube: "",
     category: "triceps-extension"
   },
   "Remada Baixa na Máquina": {
@@ -964,7 +1059,7 @@ const EXERCISE_DETAILS = {
     exec: "Segure o puxador e puxe o peso em direção ao abdômen inferior, retraindo as escápulas e levando os cotovelos para trás.",
     tips: "Pense em puxar com os cotovelos, mantendo o peito aberto e a coluna alinhada.",
     errors: "Balançar o tronco excessivamente para a frente e para trás para puxar a carga.",
-    youtube: "c7XoMv6s2M4",
+    youtube: "",
     category: "horizontal-pull"
   },
   "Remada Articulada": {
@@ -973,7 +1068,7 @@ const EXERCISE_DETAILS = {
     exec: "Puxe as manoplas em direção ao corpo, espremendo as escápulas no final do movimento. Retorne controlando o peso.",
     tips: "Use a pegada neutra para maior conforto nos ombros e foque na contração das costas.",
     errors: "Tirar o peito do apoio para puxar a carga.",
-    youtube: "6kF9hS2g2aE",
+    youtube: "",
     category: "horizontal-pull"
   },
   "Puxada Alta no Pulley": {
@@ -991,7 +1086,7 @@ const EXERCISE_DETAILS = {
     exec: "Segure as manoplas e flexione os cotovelos trazendo o peso em direção aos ombros. Desça de forma lenta até estender quase totalmente.",
     tips: "Mantenha os punhos firmes e retos, concentrando o torque no bíceps.",
     errors: "Estender totalmente o cotovelo de forma abrupta na descida sob alta tensão.",
-    youtube: "kY31Wn6S41M",
+    youtube: "",
     category: "biceps-curl"
   },
   "Rosca no Pulley": {
@@ -1000,7 +1095,7 @@ const EXERCISE_DETAILS = {
     exec: "Flexione os cotovelos trazendo a barra em direção aos ombros. Retorne controladamente até estender os braços.",
     tips: "Mantenha a postura ereta e aperte o bíceps no topo da contração.",
     errors: "Mover os cotovelos para a frente ou usar impulso do quadril para levantar a carga.",
-    youtube: "k5qP8W-9F-8",
+    youtube: "",
     category: "biceps-curl"
   },
   "Leg Press 45°": {
@@ -1018,7 +1113,7 @@ const EXERCISE_DETAILS = {
     exec: "Estenda as pernas totalmente elevando o rolo. Faça uma pausa de 1s no topo e desça de forma controlada.",
     tips: "Segure firme nos apoios laterais da cadeira para estabilizar o quadril.",
     errors: "Realizar o movimento rápido demais ou ajustar o rolo diretamente sobre a articulação do tornozelo.",
-    youtube: "I_uBK4DDflU",
+    youtube: "",
     category: "calf"
   },
   "Cadeira Flexora": {
@@ -1036,7 +1131,7 @@ const EXERCISE_DETAILS = {
     exec: "Empurre o quadril para cima contraindo os glúteos ao máximo até alinhar o tronco às coxas. Desça de forma controlada.",
     tips: "Mantenha os pés inteiros no solo e empurre através dos calcanhares.",
     errors: "Arquear excessivamente a coluna cervical ou lombar no topo do movimento.",
-    youtube: "8zO8z4_00oM",
+    youtube: "",
     category: "hip-thrust"
   },
   "Gêmeos na Máquina": {
@@ -1045,7 +1140,7 @@ const EXERCISE_DETAILS = {
     exec: "Empurre a plataforma alongando totalmente as panturrilhas para baixo, depois contraia empurrando o corpo para cima o máximo possível.",
     tips: "Segure 1s na contração máxima e alongue devagar.",
     errors: "Dar saltos rápidos (quicar) sem controlar a fase de alongamento.",
-    youtube: "Q-Vcpx92vJ4",
+    youtube: "",
     category: "calf"
   },
   "Abdominal na Máquina": {
@@ -1092,16 +1187,16 @@ const EXERCISE_DETAILS = {
     exec: "Eleve os braços para os lados de forma controlada, mantendo os cotovelos levemente flexionados, até que as mãos cheguem à linha dos ombros. Desça devagar resistindo ao peso.",
     tips: "Pense em empurrar as mãos para os lados (para fora) e não simplesmente para cima. O dedo mínimo deve apontar ligeiramente para cima no topo do movimento.",
     errors: "Usar impulso com o tronco (balanço) para levantar os halteres ou elevar as mãos acima da linha dos ombros.",
-    youtube: "c7zMmbWkUPw",
+    youtube: "",
     category: "shoulder-fly"
   },
   "Tríceps Extensão": {
     muscles: "Tríceps Braquial",
     prep: "Sente-se em um banco ou cadeira firme, mantendo as costas bem retas. Segure um halter com as duas mãos por trás da cabeça, ou deite-se no banco realizando o tríceps testa.",
-    exec: "Estenda os braços verticalmente empurrando o halter em direção ao teto. Retorne flexionando lentamente os cotovelos por trás da cabeça mantendo os braços firmes.",
+    exec: "Estenda os braços verticalmente empurrando o halter inibindo oscilações. Retorne flexionando lentamente os cotovelos.",
     tips: "Mantenha os cotovelos o mais fechados e próximos da cabeça possível para maximizar o trabalho das cabeças do tríceps.",
     errors: "Afastar os cotovelos lateralmente de forma excessiva na descida.",
-    youtube: "kY32J67-B9I",
+    youtube: "",
     category: "triceps-extension"
   },
   "Rosca Bíceps": {
@@ -1119,7 +1214,7 @@ const EXERCISE_DETAILS = {
     exec: "Puxe os halteres em direção ao abdômen inferior flexionando os cotovelos para trás. Esprema as escápulas no topo e desça com controle.",
     tips: "Sua lombar deve estar estável. Se sentir dor nas costas, reduza o peso ou incline menos o tronco.",
     errors: "Curvar as costas (corcunda) durante a execução, sobrecarregando a lombar.",
-    youtube: "vN_A48eXj-k",
+    youtube: "",
     category: "horizontal-pull"
   },
   "Remada Serrote": {
@@ -1128,7 +1223,7 @@ const EXERCISE_DETAILS = {
     exec: "Puxe o halter de forma vertical direcionando o cotovelo para trás e para cima até a linha do tronco. Retorne lentamente.",
     tips: "Mantenha o ombro de trabalho solto no início para alongar a dorsal e suba focando em esmagar a lateral das costas.",
     errors: "Girar excessivamente o tronco durante a puxada ou subir o halter em direção ao peito em vez do quadril.",
-    youtube: "F0c2p81yqms",
+    youtube: "",
     category: "horizontal-pull"
   },
   "Pullover": {
@@ -1137,7 +1232,7 @@ const EXERCISE_DETAILS = {
     exec: "Desça o halter por trás da cabeça mantendo os braços ligeiramente flexionados, até sentir um alongamento nas costas e peito. Puxe de volta para o peito.",
     tips: "Mantenha o abdômen ativado e a lombar estável para não arquear demais as costas na descida.",
     errors: "Flexionar excessivamente os cotovelos transformando o exercício em extensão de tríceps.",
-    youtube: "QG_o-kY3m2o",
+    youtube: "",
     category: "horizontal-pull"
   },
   "Agachamento Búlgaro": {
@@ -1146,16 +1241,16 @@ const EXERCISE_DETAILS = {
     exec: "Desça verticalmente flexionando o joelho da frente até que a coxa fique paralela ao solo. Empurre com o calcanhar da frente para subir.",
     tips: "Mantenha o tronco levemente inclinado para a frente para focar no glúteo ou ereto para focar no quadríceps.",
     errors: "Deixar o joelho da frente desabar para dentro durante a descida.",
-    youtube: "kYd4XyCgYpA",
+    youtube: "",
     category: "lunge"
   },
   "Agachamento": {
     muscles: "Quadríceps, Glúteo Maior, Posterior de Coxa",
     prep: "Em pé, segure um halter pesado na vertical junto ao peito (Goblet) ou posicione os halteres ao lado do corpo. Pés na largura dos ombros.",
-    exec: "Desça flexionando o quadril e os joelhos como se fosse sentar em uma cadeira. Vá até a coxa passar da linha paralela e suba.",
+    exec: "Desça flexionando o quadril e os joelhos como se fosse sentar inibindo rotações. Vá até a coxa passar da linha paralela e suba.",
     tips: "Mantenha as costas retas, calcanhares colados no chão e joelhos apontando para fora na mesma direção dos pés.",
     errors: "Tirar os calcanhares do chão ou arquear a coluna lombar na descida.",
-    youtube: "kYd4XyCgYpA",
+    youtube: "",
     category: "squat"
   },
   "Afundo": {
@@ -1164,7 +1259,7 @@ const EXERCISE_DETAILS = {
     exec: "Flexione os joelhos descendo o quadril verticalmente até que o joelho de trás quase toque o chão e o da frente forme 90°. Retorne empurrando o pé da frente.",
     tips: "O joelho da frente não deve passar excessivamente a linha dos dedos do pé.",
     errors: "Dar passos muito curtos gerando estresse no joelho ou perder o equilíbrio lateral.",
-    youtube: "kYd4XyCgYpA",
+    youtube: "",
     category: "lunge"
   },
   "Terra Romeno": {
@@ -1173,16 +1268,16 @@ const EXERCISE_DETAILS = {
     exec: "Empurre o quadril para trás dobrando o tronco para a frente. Desça os halteres rentes às pernas até sentir alongar a coxa. Suba contraindo o glúteo.",
     tips: "O movimento ocorre exclusivamente no quadril, a coluna deve ficar reta e rígida.",
     errors: "Flexionar os joelhos durante a descida (transformando em agachamento) ou dobrar a coluna.",
-    youtube: "eYyE9K1L9bE",
+    youtube: "",
     category: "hinge"
   },
   "Elevação Pélvica": {
     muscles: "Glúteo Maior, Posterior de Coxa, Core",
     prep: "Apoie a parte superior das costas em um banco estável. Coloque um halter sobre o quadril (use colchonete) e flexione os joelhos a 90°.",
     exec: "Eleve o quadril em direção ao teto contraindo os glúteos com força. Desça de forma controlada até quase encostar o quadril no solo.",
-    tips: "Mantenha o queixo apontado para a frente inibindo a hiperextensão cervical para estabilizar a coluna lombar no topo.",
+    tips: "Mantenha o queixo apontado para a frente em direção ao peitoral para estabilizar a coluna lombar no topo.",
     errors: "Arquear excessivamente a lombar no topo estendendo a coluna além do alinhamento neutro.",
-    youtube: "8zO8z4_00oM",
+    youtube: "",
     category: "hip-thrust"
   },
   "Gêmeos": {
@@ -1191,7 +1286,7 @@ const EXERCISE_DETAILS = {
     exec: "Suba o corpo empurrando as pontas dos pés para cima contraindo as panturrilhas. Desça lentamente alongando o máximo possível.",
     tips: "Faça uma pausa de 1s na contração máxima para potencializar o estímulo.",
     errors: "Realizar movimentos curtos e excessivamente rápidos.",
-    youtube: "Q-Vcpx92vJ4",
+    youtube: "",
     category: "calf"
   },
   "Abdominal com Halter": {
@@ -1238,7 +1333,7 @@ const EXERCISE_DETAILS = {
     exec: "Flexione os cotovelos descendo a cabeça diagonalmente para a frente em direção ao chão. Empurre o chão estendendo os braços.",
     tips: "Mantenha a postura em V e empurre de volta diagonalmente para o topo, simulando um desenvolvimento militar.",
     errors: "Bater a cabeça no chão por falta de controle ou descer verticalmente achatando o movimento.",
-    youtube: "G1b8sU3q_x8",
+    youtube: "",
     category: "vertical-press"
   },
   "Superman Dinâmico": {
@@ -1247,7 +1342,7 @@ const EXERCISE_DETAILS = {
     exec: "Contraia as costas e glúteos levantando simultaneamente o peitoral, braços e pernas do chão. Segure 1s e retorne devagar.",
     tips: "Mantenha a cabeça neutra olhando para baixo para não tensionar o pescoço.",
     errors: "Hiperestender o pescoço ou dar impulsos bruscos com a lombar.",
-    youtube: "5z68b2k9aP4",
+    youtube: "",
     category: "hinge"
   },
   "Puxada no Chão": {
@@ -1274,7 +1369,7 @@ const EXERCISE_DETAILS = {
     exec: "Agache flexionando o quadril e joelhos até a paralela. Segure a posição inferior por 2s e suba de forma explosiva.",
     tips: "A pausa remove a energia elástica, exigindo muito mais força dos quadríceps na subida.",
     errors: "Perder a tensão e 'desabar' na pausa inferior.",
-    youtube: "kYd4XyCgYpA",
+    youtube: "",
     category: "squat"
   },
   "Prancha Abdominal": {
@@ -1310,7 +1405,7 @@ const EXERCISE_DETAILS = {
     exec: "Consulte as instruções do Superman Dinâmico ou Puxada no Chão.",
     tips: "Exercício alternativo sem uso de barras ou móveis.",
     errors: "Nenhum.",
-    youtube: "c_wM68S2K9E",
+    youtube: "",
     category: "vertical-pull"
   },
   "Mergulho Banco": {
@@ -1319,7 +1414,7 @@ const EXERCISE_DETAILS = {
     exec: "Consulte as instruções da Flexão Diamante.",
     tips: "Exercício alternativo sem uso de apoios adicionais.",
     errors: "Nenhum.",
-    youtube: "kY32J67-B9I",
+    youtube: "",
     category: "triceps-extension"
   },
   "Superman": {
@@ -1328,7 +1423,7 @@ const EXERCISE_DETAILS = {
     exec: "Erga braços e pernas mantendo a contração e retorne de forma lenta.",
     tips: "Mantenha a cabeça alinhada com a coluna.",
     errors: "Hiperestender excessivamente o pescoço.",
-    youtube: "5z68b2k9aP4",
+    youtube: "",
     category: "hinge"
   },
   "Puxada Isométrica": {
@@ -1352,7 +1447,7 @@ const EXERCISE_DETAILS = {
   "Superset Ombros": {
     muscles: "Deltoide Lateral/Posterior",
     prep: "Realize elevações laterais simulando carga isométrica ou usando halteres.",
-    exec: "Faça movimentos lentos para manter a tensão muscular.",
+    exec: "Faça movimentos lentos para manter a tensionamento.",
     tips: "Mantenha o controle da postura.",
     errors: "Nenhum.",
     youtube: "bCZ5a6WQyt0",
@@ -1851,6 +1946,93 @@ function setupModalTabs() {
 }
 
 function getExerciseVisual(normKey, category) {
+  if (normKey === "Supino na Máquina" || normKey === "Supino Inclinado na Máquina") {
+    return `
+      <svg viewBox="0 0 120 100" class="ex-svg">
+        <line x1="45" y1="40" x2="45" y2="85" stroke="var(--hairline)" stroke-width="3" stroke-linecap="round"/>
+        <line x1="40" y1="85" x2="65" y2="85" stroke="var(--hairline)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="48" cy="30" r="5" fill="var(--chalk)"/>
+        <line x1="48" y1="35" x2="48" y2="70" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M 48,70 L 65,70 L 65,85" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="mach-press-arm" d="M 48,45 L 68,45" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
+        <line class="mach-press-handle" x1="68" y1="35" x2="68" y2="55" stroke="var(--ember)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    `;
+  } else if (normKey === "Puxada Alta no Pulley") {
+    return `
+      <svg viewBox="0 0 100 120" class="ex-svg">
+        <line x1="30" y1="100" x2="65" y2="100" stroke="var(--hairline)" stroke-width="3"/>
+        <path d="M 35,100 L 35,70 L 50,70" fill="none" stroke="var(--hairline)" stroke-width="2"/>
+        <circle cx="45" cy="45" r="5.5" fill="var(--chalk)"/>
+        <line x1="45" y1="51" x2="45" y2="85" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M 45,85 L 55,85 L 55,100" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="pulldown-arms" d="M 45,55 L 35,25 M 45,55 L 55,25" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
+        <line class="pulldown-bar" x1="30" y1="25" x2="60" y2="25" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    `;
+  } else if (normKey === "Remada Baixa na Máquina" || normKey === "Remada Articulada") {
+    return `
+      <svg viewBox="0 0 120 100" class="ex-svg">
+        <line x1="85" y1="40" x2="85" y2="85" stroke="var(--hairline)" stroke-width="2"/>
+        <line x1="30" y1="80" x2="70" y2="80" stroke="var(--hairline)" stroke-width="3"/>
+        <circle cx="45" cy="45" r="5.5" fill="var(--chalk)"/>
+        <path class="rower-torso" d="M 45,51 L 45,80" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M 45,80 L 85,80" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
+        <line class="rower-cable" x1="85" y1="60" x2="55" y2="60" stroke="var(--hairline)" stroke-width="1.5"/>
+        <path class="rower-arms" d="M 45,55 L 55,60" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="rower-handle" cx="55" cy="60" r="3" fill="var(--ember)"/>
+      </svg>
+    `;
+  } else if (normKey === "Leg Press 45°") {
+    return `
+      <svg viewBox="0 0 120 100" class="ex-svg">
+        <line x1="20" y1="85" x2="55" y2="50" stroke="var(--hairline)" stroke-width="3" stroke-linecap="round"/>
+        <line x1="15" y1="85" x2="80" y2="85" stroke="var(--hairline)" stroke-width="2"/>
+        <circle cx="58" cy="46" r="5" fill="var(--chalk)"/>
+        <line x1="55" y1="52" x2="35" y2="72" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <path class="legpress-legs" d="M 35,72 L 65,55 L 85,35" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g class="legpress-plate-g">
+          <line x1="75" y1="45" x2="95" y2="25" stroke="var(--ember)" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    `;
+  } else if (normKey === "Cadeira Extensora") {
+    return `
+      <svg viewBox="0 0 100 120" class="ex-svg">
+        <line x1="20" y1="80" x2="60" y2="80" stroke="var(--hairline)" stroke-width="3"/>
+        <line x1="30" y1="80" x2="30" y2="40" stroke="var(--hairline)" stroke-width="3"/>
+        <circle cx="33" cy="30" r="5.5" fill="var(--chalk)"/>
+        <line x1="33" y1="36" x2="33" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="33" y1="80" x2="60" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <path class="leg-ext-shin" d="M 60,80 L 60,110" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round"/>
+        <circle class="leg-ext-pad" cx="60" cy="107" r="4.5" fill="var(--ember)"/>
+      </svg>
+    `;
+  } else if (normKey === "Cadeira Flexora") {
+    return `
+      <svg viewBox="0 0 100 120" class="ex-svg">
+        <line x1="20" y1="80" x2="60" y2="80" stroke="var(--hairline)" stroke-width="3"/>
+        <line x1="30" y1="80" x2="30" y2="40" stroke="var(--hairline)" stroke-width="3"/>
+        <circle cx="33" cy="30" r="5.5" fill="var(--chalk)"/>
+        <line x1="33" y1="36" x2="33" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="33" y1="80" x2="60" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <path class="leg-curl-shin" d="M 60,80 L 90,80" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round"/>
+        <circle class="leg-curl-pad" cx="87" cy="80" r="4.5" fill="var(--ember)"/>
+      </svg>
+    `;
+  } else if (normKey === "Desenvolvimento na Máquina") {
+    return `
+      <svg viewBox="0 0 100 120" class="ex-svg">
+        <line x1="45" y1="60" x2="45" y2="110" stroke="var(--hairline)" stroke-width="3"/>
+        <line x1="30" y1="110" x2="60" y2="110" stroke="var(--hairline)" stroke-width="3"/>
+        <circle cx="50" cy="50" r="5.5" fill="var(--chalk)"/>
+        <line x1="50" y1="56" x2="50" y2="90" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
+        <path class="mach-shpress-arms" d="M 50,65 L 65,45" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
+        <line class="mach-shpress-bar" x1="55" y1="45" x2="75" y2="45" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    `;
+  }
+
   if (normKey === "Flexão de Braço" || normKey === "Flexão Diamante") {
     return `
       <svg viewBox="0 0 120 100" class="ex-svg">
