@@ -912,6 +912,153 @@ const BADGES = [
 
 /* ======================= DADOS DOS EXERCÍCIOS ======================= */
 const EXERCISE_DETAILS = {
+  // Gym Machine Exercises
+  "Supino na Máquina": {
+    muscles: "Peitoral Maior, Deltoide Anterior, Tríceps Braquial",
+    prep: "Ajuste o banco da máquina para que as manoplas fiquem na linha média do peitoral. Sente-se com as costas e a cabeça bem apoiadas no encosto.",
+    exec: "Empurre as manoplas para a frente estendendo os braços de forma explosiva, mas controlada. Retorne lentamente até que as manoplas quase toquem o peito.",
+    tips: "Mantenha as escápulas retraídas no banco durante todo o movimento e os ombros baixos.",
+    errors: "Projetar os ombros para a frente no final do empurrão tirando as costas do encosto.",
+    youtube: "FPTjTshb7Q0",
+    category: "horizontal-press"
+  },
+  "Supino Inclinado na Máquina": {
+    muscles: "Peitoral Superior (Clavicular), Deltoide Anterior, Tríceps",
+    prep: "Ajuste a altura do assento para que os apoios de mão fiquem alinhados com a parte superior do peito.",
+    exec: "Segure as manoplas firmemente e empurre o peso para cima seguindo a guia articulada da máquina. Retorne de forma lenta.",
+    tips: "Mantenha o foco na contração das fibras superiores do peitoral e empurre com os cotovelos alinhados.",
+    errors: "Não apoiar completamente a lombar ou a cabeça durante a execução.",
+    youtube: "P2r-16o-xM0",
+    category: "horizontal-press"
+  },
+  "Desenvolvimento na Máquina": {
+    muscles: "Deltoide Anterior/Lateral, Tríceps Braquial",
+    prep: "Sente-se no aparelho de desenvolvimento, ajuste o banco para que as manoplas fiquem na altura do ombro e apoie as costas.",
+    exec: "Empurre o peso para cima verticalmente até a extensão quase completa dos braços. Desça de volta de maneira controlada.",
+    tips: "Mantenha os cotovelos debaixo dos punhos e evite estender totalmente o cotovelo no topo para manter a tensão.",
+    errors: "Arquear excessivamente a coluna lombar para compensar cargas altas.",
+    youtube: "5z68b2k9aP4",
+    category: "vertical-press"
+  },
+  "Elevação Lateral na Máquina": {
+    muscles: "Deltoide Lateral, Trapézio",
+    prep: "Ajuste a máquina para que o eixo de rotação coincida com os seus ombros. Apoie os antebraços nos rolos acolchoados.",
+    exec: "Eleve os braços para fora e para cima até que fiquem paralelos ao solo. Desça controlando o retorno do peso.",
+    tips: "Mantenha o pescoço e trapézio relaxados, concentrando a força na lateral dos ombros.",
+    errors: "Encolher os ombros no início do movimento ou usar impulso para subir.",
+    youtube: "mD26d9z6_n8",
+    category: "shoulder-fly"
+  },
+  "Tríceps no Pulley": {
+    muscles: "Tríceps Braquial (Cabeça Lateral, Longa e Medial)",
+    prep: "Posicione-se em frente à polia alta, segurando a barra ou corda. Flexione os cotovelos em 90° colados nas costelas.",
+    exec: "Estenda os braços para baixo empurrando a barra/corda até a extensão total. Retorne devagar até a altura do peito.",
+    tips: "Mantenha os cotovelos fixos ao lado do corpo; apenas os antebraços devem se movimentar.",
+    errors: "Mover os cotovelos para a frente e para trás ou inclinar o corpo sobre a barra.",
+    youtube: "kY32J67-B9I",
+    category: "triceps-extension"
+  },
+  "Remada Baixa na Máquina": {
+    muscles: "Latíssimo do Dorso (Costas), Romboides, Trapézio Médio",
+    prep: "Sente-se na máquina com os pés apoiados nas plataformas. Mantenha os joelhos ligeiramente flexionados e a coluna ereta.",
+    exec: "Segure o puxador e puxe o peso em direção ao abdômen inferior, retraindo as escápulas e levando os cotovelos para trás.",
+    tips: "Pense em puxar com os cotovelos, mantendo o peito aberto e a coluna alinhada.",
+    errors: "Balançar o tronco excessivamente para a frente e para trás para puxar a carga.",
+    youtube: "c7XoMv6s2M4",
+    category: "horizontal-pull"
+  },
+  "Remada Articulada": {
+    muscles: "Latíssimo do Dorso, Romboides, Deltoide Posterior",
+    prep: "Ajuste o assento para que o peitoral fique apoiado confortavelmente no estofamento frontal. Segure as manoplas.",
+    exec: "Puxe as manoplas em direção ao corpo, espremendo as escápulas no final do movimento. Retorne controlando o peso.",
+    tips: "Use a pegada neutra para maior conforto nos ombros e foque na contração das costas.",
+    errors: "Tirar o peito do apoio para puxar a carga.",
+    youtube: "6kF9hS2g2aE",
+    category: "horizontal-pull"
+  },
+  "Puxada Alta no Pulley": {
+    muscles: "Latíssimo do Dorso (Asas), Romboides, Bíceps Braquial",
+    prep: "Ajuste o rolo de coxa da máquina. Segure a barra com pegada pronada, mais larga que os ombros, e sente-se.",
+    exec: "Puxe a barra em direção à parte superior do peito, jogando os cotovelos para baixo e para trás. Retorne estendendo totalmente os braços.",
+    tips: "Incline o tronco levemente para trás (10-15°) e junte as escápulas ao iniciar a puxada.",
+    errors: "Puxar a barra com as costas curvadas ou usar o peso do corpo para dar impulso.",
+    youtube: "uLwa98hrLcs",
+    category: "vertical-pull"
+  },
+  "Rosca Scott na Máquina": {
+    muscles: "Bíceps Braquial, Braquial, Braquiorradial",
+    prep: "Ajuste o assento para que os braços fiquem apoiados por completo no estofamento inclinado, axilas bem encaixadas.",
+    exec: "Segure as manoplas e flexione os cotovelos trazendo o peso em direção aos ombros. Desça de forma lenta até estender quase totalmente.",
+    tips: "Mantenha os punhos firmes e retos, concentrando o torque no bíceps.",
+    errors: "Estender totalmente o cotovelo de forma abrupta na descida sob alta tensão.",
+    youtube: "kY31Wn6S41M",
+    category: "biceps-curl"
+  },
+  "Rosca no Pulley": {
+    muscles: "Bíceps Braquial",
+    prep: "Fique em pé de frente para a polia baixa, segurando a barra reta ou W conectada ao cabo. Cotovelos colados ao corpo.",
+    exec: "Flexione os cotovelos trazendo a barra em direção aos ombros. Retorne controladamente até estender os braços.",
+    tips: "Mantenha a postura ereta e aperte o bíceps no topo da contração.",
+    errors: "Mover os cotovelos para a frente ou usar impulso do quadril para levantar a carga.",
+    youtube: "k5qP8W-9F-8",
+    category: "biceps-curl"
+  },
+  "Leg Press 45°": {
+    muscles: "Quadríceps, Glúteo Maior, Posterior de Coxa",
+    prep: "Posicione-se no aparelho com as costas e o quadril bem apoiados. Coloque os pés na plataforma na largura dos ombros.",
+    exec: "Destrave a plataforma, desça controladamente dobrando os joelhos a ~90° sem tirar o quadril do banco. Empurre de volta sem travar as articulações.",
+    tips: "Mantenha os joelhos alinhados com a ponta dos pés (sem deixá-los ir para dentro). Pressione o calcanhar contra a chapa.",
+    errors: "Descolar o quadril do encosto no final da descida, gerando alta pressão na lombar.",
+    youtube: "bfHuhQPa4lc",
+    category: "squat"
+  },
+  "Cadeira Extensora": {
+    muscles: "Quadríceps (Isolado)",
+    prep: "Sente-se apoiando as costas por completo no encosto. Ajuste o rolo de espuma sobre a parte inferior da canela (acima do tornozelo).",
+    exec: "Estenda as pernas totalmente elevando o rolo. Faça uma pausa de 1s no topo e desça de forma controlada.",
+    tips: "Segure firme nos apoios laterais da cadeira para estabilizar o quadril.",
+    errors: "Realizar o movimento rápido demais ou ajustar o rolo diretamente sobre a articulação do tornozelo.",
+    youtube: "I_uBK4DDflU",
+    category: "calf"
+  },
+  "Cadeira Flexora": {
+    muscles: "Posterior de Coxa (Isquiotibiais)",
+    prep: "Sente-se na cadeira flexionando as pernas e apoiando o rolo atrás do tornozelo. Ajuste o fixador sobre as coxas.",
+    exec: "Puxe o rolo para baixo e para trás flexionando os joelhos ao máximo. Retorne lentamente até a posição inicial.",
+    tips: "Mantenha o quadril pressionado contra o banco para isolar os posteriores.",
+    errors: "Deixar o quadril levantar do assento durante a contração.",
+    youtube: "Zss6E3VU6X0",
+    category: "calf"
+  },
+  "Elevação Pélvica na Máquina": {
+    muscles: "Glúteo Maior, Posterior de Coxa",
+    prep: "Sente-se na máquina de elevação pélvica, ajuste o cinto/almofada de peso sobre o quadril e apoie as costas.",
+    exec: "Empurre o quadril para cima contraindo os glúteos ao máximo até alinhar o tronco às coxas. Desça de forma controlada.",
+    tips: "Mantenha os pés inteiros no solo e empurre através dos calcanhares.",
+    errors: "Arquear excessivamente a coluna cervical ou lombar no topo do movimento.",
+    youtube: "8zO8z4_00oM",
+    category: "hip-thrust"
+  },
+  "Gêmeos na Máquina": {
+    muscles: "Gastrocnêmio, Sóleo (Panturrilhas)",
+    prep: "Posicione os ombros sob os apoios acolchoados da máquina em pé, ou sente-se se for a máquina sentada. Apoie apenas a ponta dos pés na plataforma.",
+    exec: "Empurre a plataforma alongando totalmente as panturrilhas para baixo, depois contraia empurrando o corpo para cima o máximo possível.",
+    tips: "Segure 1s na contração máxima e alongue devagar.",
+    errors: "Dar saltos rápidos (quicar) sem controlar a fase de alongamento.",
+    youtube: "Q-Vcpx92vJ4",
+    category: "calf"
+  },
+  "Abdominal na Máquina": {
+    muscles: "Reto Abdominal",
+    prep: "Sente-se no aparelho, segure as manoplas na altura do peito ou ombros e encaixe o apoio no peito/abdômen.",
+    exec: "Realize a flexão do tronco curvando a coluna para frente contraindo o abdômen. Retorne de forma lenta resistindo à carga.",
+    tips: "Concentre-se em aproximar o esterno (peito) do púbis, sem usar os braços para puxar.",
+    errors: "Forçar o movimento usando os braços ou flexores do quadril.",
+    youtube: "l4kQd9eWclE",
+    category: "core-plank"
+  },
+
+  // Home/Dumbbell Exercises
   "Supino Reto": {
     muscles: "Peitoral Maior, Deltoide Anterior, Tríceps Braquial",
     prep: "Deite-se no banco plano, apoie os pés firmes no chão, contraia as escápulas jogando os ombros para trás e segure os halteres acima do peito com os braços estendidos.",
@@ -932,7 +1079,7 @@ const EXERCISE_DETAILS = {
   },
   "Desenvolvimento": {
     muscles: "Deltoide (Principalmente Anterior e Lateral), Tríceps Braquial, Trapézio",
-    prep: "Sente-se com as casas totalmente apoiadas no encosto do banco, abdômen ativado. Segure os halteres na altura das orelhas, cotovelos apontando para baixo e levemente para a frente.",
+    prep: "Sente-se com as costas totalmente apoiadas no encosto do banco, abdômen ativado. Segure os halteres na altura das orelhas, cotovelos apontando para baixo e levemente para a frente.",
     exec: "Empurre os halteres para cima de forma vertical até estender quase totalmente os braços. Retorne lentamente até a posição das orelhas.",
     tips: "Mantenha o abdômen contraído para estabilizar a coluna. Não deixe a lombar descolar do banco e evite esticar totalmente os cotovelos no topo.",
     errors: "Arquear excessivamente a lombar (fazendo uma ponte) ou bater os halteres no topo com impacto.",
@@ -949,140 +1096,124 @@ const EXERCISE_DETAILS = {
     category: "shoulder-fly"
   },
   "Tríceps Extensão": {
-    muscles: "Tríceps Braquial (Cabeça Longa, Lateral e Medial)",
-    prep: "Em pé ou sentado, segure o halter com as duas mãos (ou uma por braço), estenda os braços totalmente para cima ao lado da cabeça, apontando os cotovelos para a frente.",
-    exec: "Flexione os cotovelos para descer o peso atrás da cabeça de forma controlada até sentir alongar o tríceps. Estenda os braços novamente até a contração máxima.",
-    tips: "Mantenha os cotovelos o mais fechados e apontados para a frente possível. Apenas o antebraço deve se mover.",
-    errors: "Abrir demais os cotovelos para as laterais ou movimentar os ombros para a frente e para trás.",
-    youtube: "fYqswDVbJDg",
-    category: "triceps-extension"
-  },
-  "Mergulho Banco": {
-    muscles: "Tríceps Braquial, Peitoral Menor, Deltoide Anterior",
-    prep: "Apoie as mãos na borda de um banco plano ou cadeira firme atrás de você. Projete o quadril para a frente e apoie os calcanhares no chão com pernas retas ou flexionadas.",
-    exec: "Flexione os cotovelos para descer o quadril rente ao banco até que os cotovelos formem um ângulo de aproximadamente 90°. Empurre o corpo de volta para cima.",
-    tips: "Mantenha as costas raspando bem perto do banco. Contraia o abdômen e evite que os ombros subam em direção às orelhas.",
-    errors: "Afastar muito o corpo do banco durante a descida, criando um estresse excessivo e prejudicial nos ombros.",
-    youtube: "UGxwkr52YLM",
+    muscles: "Tríceps Braquial",
+    prep: "Sente-se em um banco ou cadeira firme, mantendo as costas bem retas. Segure um halter com as duas mãos por trás da cabeça, ou deite-se no banco realizando o tríceps testa.",
+    exec: "Estenda os braços verticalmente empurrando o halter em direção ao teto. Retorne flexionando lentamente os cotovelos por trás da cabeça mantendo os braços firmes.",
+    tips: "Mantenha os cotovelos o mais fechados e próximos da cabeça possível para maximizar o trabalho das cabeças do tríceps.",
+    errors: "Afastar os cotovelos lateralmente de forma excessiva na descida.",
+    youtube: "kY32J67-B9I",
     category: "triceps-extension"
   },
   "Rosca Bíceps": {
-    muscles: "Bíceps Braquial, Braquial, Braquiorradial",
-    prep: "Fique em pé ou sentado ereto, halteres segurados ao lado do corpo, palmas voltadas para a frente ou em pegada neutra.",
-    exec: "Flexione os cotovelos trazendo o peso em direção aos ombros de forma controlada. Gire o punho (palma para cima) na metade do caminho se for rosca alternada. Desça lentamente.",
-    tips: "Mantenha os cotovelos colados fixos ao lado do tronco. Não empurre os cotovelos para a frente na subida do peso.",
-    errors: "Balançar as costas (roubo) para ajudar a erguer o peso ou soltar o peso rapidamente na descida.",
+    muscles: "Bíceps Braquial, Braquial, Antebraços",
+    prep: "Fique em pé ou sentado, segurando os halteres com os braços estendidos ao lado do corpo. Peito aberto e abdômen ativado.",
+    exec: "Flexione os cotovelos elevando os halteres em direção aos ombros. Retorne controlando o movimento sem balançar.",
+    tips: "Mantenha os cotovelos imóveis e fixados ao lado do corpo. Gire os punhos para cima (supinação) se fizer a rosca alternada.",
+    errors: "Projetar os cotovelos para a frente ou usar o quadril e as costas para balançar a carga.",
     youtube: "Q8TqfD8E7BU",
     category: "biceps-curl"
   },
   "Remada Curvada": {
-    muscles: "Dorsal (Latíssimo do Dorso), Redondo Maior, Romboides, Deltoide Posterior",
-    prep: "Incline o tronco para a frente em um ângulo de ~45°, flexione levemente os joelhos e empurre o quadril para trás, mantendo a coluna totalmente reta.",
-    exec: "Puxe os halteres em direção à base das costelas (perto do umbigo), direcionando os cotovelos para trás e para cima. Aperte as costas e retorne devagar.",
-    tips: "Imagine que seus braços são apenas ganchos e puxe o peso usando a força dos cotovelos. Mantenha o pescoço alinhado com a coluna.",
-    errors: "Arquear as costas (coluna arredondada), o que pode causar lesões na lombar, ou erguer o tronco durante a execução.",
-    youtube: "HpvaOR4H5Hg",
+    muscles: "Latíssimo do Dorso, Romboides, Trapézio, Deltoide Posterior",
+    prep: "Incline o tronco para a frente a um ângulo de 45° mantendo a coluna reta e neutra. Joelhos levemente flexionados, segure os halteres.",
+    exec: "Puxe os halteres em direção ao abdômen inferior flexionando os cotovelos para trás. Esprema as escápulas no topo e desça com controle.",
+    tips: "Sua lombar deve estar estável. Se sentir dor nas costas, reduza o peso ou incline menos o tronco.",
+    errors: "Curvar as costas (corcunda) durante a execução, sobrecarregando a lombar.",
+    youtube: "vN_A48eXj-k",
     category: "horizontal-pull"
   },
   "Remada Serrote": {
-    muscles: "Latíssimo do Dorso, Trapézio, Romboides, Deltoide Posterior, Bíceps",
-    prep: "Apoie o joelho e a mão do mesmo lado em um banco plano. Mantenha a outra perna firme no chão e a coluna paralela ao banco. Segure o halter com o braço estendido.",
-    exec: "Puxe o halter direcionando-o para o quadril, elevando o cotovelo rente ao tronco até o limite das costas. Alongue o braço completamente na descida.",
-    tips: "Mantenha os ombros sempre nivelados e paralelos ao banco, sem girar o tronco. Foco na movimentação da escápula.",
-    errors: "Puxar o halter na direção do peito (usando mais bíceps que costas) ou rotacionar o tronco para cima.",
-    youtube: "zBPVq78VHV8",
+    muscles: "Latíssimo do Dorso, Romboides, Deltoide Posterior",
+    prep: "Apoie uma das mãos e um joelho no banco plano para estabilização total da coluna. Com a outra mão livre, segure o halter em direção ao solo.",
+    exec: "Puxe o halter de forma vertical direcionando o cotovelo para trás e para cima até a linha do tronco. Retorne lentamente.",
+    tips: "Mantenha o ombro de trabalho solto no início para alongar a dorsal e suba focando em esmagar a lateral das costas.",
+    errors: "Girar excessivamente o tronco durante a puxada ou subir o halter em direção ao peito em vez do quadril.",
+    youtube: "F0c2p81yqms",
     category: "horizontal-pull"
   },
-  "Barra Fixa": {
-    muscles: "Latíssimo do Dorso (Dorsal), Romboides, Bíceps, Core",
-    prep: "Segure na barra com pegada pronada (palmas para fora) ligeiramente mais aberta que a largura dos ombros. Corpo totalmente pendurado e firme.",
-    exec: "Ative as escápulas puxando os ombros para baixo e puxe o corpo para cima direcionando o peito para a barra. O queixo deve passar da linha da barra. Desça de forma controlada.",
-    tips: "Pense em empurrar os cotovelos para baixo em direção aos bolsos de trás. Mantenha o abdômen contraído.",
-    errors: "Utilizar impulso com as pernas (kipping) para subir ou não descer totalmente até os braços ficarem estendidos.",
-    youtube: "Sp1Ny78OTZE",
-    category: "vertical-pull"
-  },
   "Pullover": {
-    muscles: "Latíssimo do Dorso, Peitoral Maior, Serrátil Anterior, Tríceps (Cabeça Longa)",
-    prep: "Deite-se de costas em um banco plano, segure um halter com as duas mãos formando um copo, braços estendidos diretamente acima do peito.",
-    exec: "Com os cotovelos levemente flexionados e fixos, desça o halter para trás da cabeça até sentir alongar a lateral das costas e peito. Puxe de volta até a linha do peito.",
-    tips: "Mantenha o ângulo dos cotovelos rígido. O movimento ocorre puramente na articulação do ombro.",
-    errors: "Dobrar e esticar os cotovelos durante o exercício, transformando-o em um exercício de tríceps.",
-    youtube: "rW1HwuUIDgQ",
+    muscles: "Peitoral Maior, Latíssimo do Dorso, Serrátil Anterior",
+    prep: "Deite-se de costas no banco, segurando um halter com as duas mãos logo acima do peito com os braços estendidos.",
+    exec: "Desça o halter por trás da cabeça mantendo os braços ligeiramente flexionados, até sentir um alongamento nas costas e peito. Puxe de volta para o peito.",
+    tips: "Mantenha o abdômen ativado e a lombar estável para não arquear demais as costas na descida.",
+    errors: "Flexionar excessivamente os cotovelos transformando o exercício em extensão de tríceps.",
+    youtube: "QG_o-kY3m2o",
     category: "horizontal-pull"
   },
   "Agachamento Búlgaro": {
-    muscles: "Quadríceps, Glúteo Maior, Posteriores de Coxa, Adutores",
-    prep: "Fique de costas para um banco. Coloque o peito de um pé apoiado no banco. Dê um passo largo à frente com a outra perna. Segure os halteres ao lado do corpo.",
-    exec: "Desça verticalmente dobrando o joelho da frente até que a coxa fique paralela ao chão. O joelho de trás desce em direção ao solo. Suba empurrando pelo calcanhar da frente.",
-    tips: "Incline o tronco ligeiramente para a frente para focar mais nos glúteos ou mantenha o tronco reto para focar nos quadríceps.",
-    errors: "Deixar o joelho da frente desabar para dentro (valgo dinâmico) ou dar um passo muito curto à frente.",
-    youtube: "HIZ5co5hPjQ",
+    muscles: "Quadríceps, Glúteo Maior, Adutores",
+    prep: "Dê um passo à frente e posicione o pé de trás apoiado no banco. Segure os halteres ao lado do corpo.",
+    exec: "Desça verticalmente flexionando o joelho da frente até que a coxa fique paralela ao solo. Empurre com o calcanhar da frente para subir.",
+    tips: "Mantenha o tronco levemente inclinado para a frente para focar no glúteo ou ereto para focar no quadríceps.",
+    errors: "Deixar o joelho da frente desabar para dentro durante a descida.",
+    youtube: "kYd4XyCgYpA",
     category: "lunge"
   },
   "Agachamento": {
-    muscles: "Quadríceps, Glúteo Maior, Posteriores de Coxa, Eretores da Espinha, Core",
-    prep: "Fique em pé com os pés na largura dos ombros, pontas levemente voltadas para fora. Se for goblet squat, segure o halter verticalmente junto ao peito.",
-    exec: "Inicie o movimento empurrando o quadril para trás e dobrando os joelhos, como se fosse sentar em uma cadeira. Desça até passar de 90° e suba empurrando o chão.",
-    tips: "Mantenha os calcanhares sempre colados no chão. Empurre os joelhos para fora na descida, alinhando-os com as pontas dos pés.",
-    errors: "Tirar os calcanhares do chão ou curvar a coluna lombar (arredondar as costas) no fundo.",
-    youtube: "safX5-roTLw",
+    muscles: "Quadríceps, Glúteo Maior, Posterior de Coxa",
+    prep: "Em pé, segure um halter pesado na vertical junto ao peito (Goblet) ou posicione os halteres ao lado do corpo. Pés na largura dos ombros.",
+    exec: "Desça flexionando o quadril e os joelhos como se fosse sentar em uma cadeira. Vá até a coxa passar da linha paralela e suba.",
+    tips: "Mantenha as costas retas, calcanhares colados no chão e joelhos apontando para fora na mesma direção dos pés.",
+    errors: "Tirar os calcanhares do chão ou arquear a coluna lombar na descida.",
+    youtube: "kYd4XyCgYpA",
     category: "squat"
   },
   "Afundo": {
     muscles: "Quadríceps, Glúteo Maior, Posteriores de Coxa",
-    prep: "Fique em pé com os pés na largura do quadril, segure os halteres ao lado do corpo, postura ereta.",
-    exec: "Dê um passo largo à frente e desça o quadril de forma vertical até que o joelho de trás quase toque o chão e a perna da frente forme 90°. Suba empurrando com o calcanhar da frente.",
-    tips: "Mantenha o tronco firme e reto. Ao caminhar, dê passos laterais leves para manter a estabilidade do quadril.",
-    errors: "Dar passos curtos demais (forçando o joelho além do limite do pé) ou perder o alinhamento do joelho com o pé.",
-    youtube: "D7KaRcUTQeE",
+    prep: "Fique em pé segurando halteres nas mãos. Dê um passo largo para a frente.",
+    exec: "Flexione os joelhos descendo o quadril verticalmente até que o joelho de trás quase toque o chão e o da frente forme 90°. Retorne empurrando o pé da frente.",
+    tips: "O joelho da frente não deve passar excessivamente a linha dos dedos do pé.",
+    errors: "Dar passos muito curtos gerando estresse no joelho ou perder o equilíbrio lateral.",
+    youtube: "kYd4XyCgYpA",
     category: "lunge"
   },
   "Terra Romeno": {
-    muscles: "Posteriores de Coxa (Isquiotibiais), Glúteo Maior, Eretores da Espinha, Core",
-    prep: "Fique em pé com os pés na largura do quadril, segure os halteres encostados na coxa. Ombros para trás e para baixo, joelhos destravados.",
-    exec: "Empurre o quadril o máximo possível para trás, inclinando o tronco à frente. Os halteres descem raspando bem rente às pernas até a linha das canelas. Suba contraindo os glúteos.",
-    tips: "A coluna deve ficar perfeitamente reta e neutra durante todo o tempo. A força deve ser sentida no posterior de coxa e glúteos, não na lombar.",
-    errors: "Arredondar as costas ou flexionar excessivamente os joelhos, transformando o movimento em um agachamento.",
-    youtube: "_oyxCn2iSjU",
+    muscles: "Posterior de Coxa, Glúteo Maior, Eretores da Espinha",
+    prep: "Em pé, segure os halteres à frente das coxas. Joelhos levemente flexionados (apenas destravados).",
+    exec: "Empurre o quadril para trás dobrando o tronco para a frente. Desça os halteres rentes às pernas até sentir alongar a coxa. Suba contraindo o glúteo.",
+    tips: "O movimento ocorre exclusivamente no quadril, a coluna deve ficar reta e rígida.",
+    errors: "Flexionar os joelhos durante a descida (transformando em agachamento) ou dobrar a coluna.",
+    youtube: "eYyE9K1L9bE",
     category: "hinge"
   },
+  "Elevação Pélvica": {
+    muscles: "Glúteo Maior, Posterior de Coxa, Core",
+    prep: "Apoie a parte superior das costas em um banco estável. Coloque um halter sobre o quadril (use colchonete) e flexione os joelhos a 90°.",
+    exec: "Eleve o quadril em direção ao teto contraindo os glúteos com força. Desça de forma controlada até quase encostar o quadril no solo.",
+    tips: "Mantenha o queixo apontado para a frente inibindo a hiperextensão cervical para estabilizar a coluna lombar no topo.",
+    errors: "Arquear excessivamente a lombar no topo estendendo a coluna além do alinhamento neutro.",
+    youtube: "8zO8z4_00oM",
+    category: "hip-thrust"
+  },
   "Gêmeos": {
-    muscles: "Gastrocnêmio, Sóleo (Panturrilhas)",
-    prep: "Apoie a ponta dos pés em um degrau ou bloco elevado, mantendo os calcanhares livres. Segure halteres para sobrecarga.",
-    exec: "Desça os calcanhares o máximo possível para alongar a panturrilha. Suba na ponta dos pés o mais alto que puder, contraindo a musculatura.",
-    tips: "Faça uma pausa de 1 a 2 segundos no pico da subida e desça de forma controlada sem usar o rebote elástico.",
-    errors: "Fazer o movimento de forma rápida e saltada sem amplitude completa ou pausa no topo.",
+    muscles: "Gastrocnêmio, Sóleo",
+    prep: "Em pé com halteres nas mãos, posicione a ponta dos pés sobre um degrau ou bloco estável para máximo alongamento.",
+    exec: "Suba o corpo empurrando as pontas dos pés para cima contraindo as panturrilhas. Desça lentamente alongando o máximo possível.",
+    tips: "Faça uma pausa de 1s na contração máxima para potencializar o estímulo.",
+    errors: "Realizar movimentos curtos e excessivamente rápidos.",
     youtube: "Q-Vcpx92vJ4",
     category: "calf"
   },
-  "Elevação Pélvica": {
-    muscles: "Glúteo Maior, Posteriores de Coxa, Core",
-    prep: "Apoie a parte superior das costas em um banco estável. Coloque o peso sobre o quadril (use proteção) e posicione os calcanhares firmes no chão.",
-    exec: "Empurre com os calcanhares para elevar o quadril até alinhar o tronco de forma horizontal com as coxas. Aperte os glúteos por 1s e retorne devagar.",
-    tips: "Mantenha a cabeça voltada para a frente (olhar fixo na parede) para proteger a cervical e evitar hiperextensão lombar no topo.",
-    errors: "Arquear excessivamente as costas em vez de fazer a retroversão da pelve para contrair o glúteo.",
-    youtube: "vvIc6wdDyTc",
-    category: "hip-thrust"
-  },
-  "Prancha": {
-    muscles: "Reto Abdominal, Transverso Abdominal, Oblíquos, Glúteos, Lombar",
-    prep: "Apoie os antebraços no chão alinhados diretamente sob os ombros. Estenda as pernas para trás com apoio na ponta dos pés.",
-    exec: "Mantenha o corpo totalmente reto e alinhado. Contraia o abdômen, aperte as pernas e glúteos. Segure a posição respirando com calma.",
-    tips: "Imagine que está puxando o umbigo em direção à coluna. Não deixe a barriga cair e afaste as escápulas empurrando o chão.",
-    errors: "Deixar o quadril cair em direção ao chão, forçando a lombar, ou elevar muito o quadril.",
-    youtube: "b36ic1Sizzk",
+  "Abdominal com Halter": {
+    muscles: "Reto Abdominal, Transverso Abdominal",
+    prep: "Deite-se de costas no solo, pernas flexionadas e pés firmes. Segure um halter firmemente contra o peitoral.",
+    exec: "Contraia o abdômen erguendo os ombros e escápulas do solo. Retorne lentamente mantendo a tensão.",
+    tips: "Concentre-se em comprimir o abdômen sem usar a força dos braços.",
+    errors: "Subir o tronco usando impulso dos quadris.",
+    youtube: "l4kQd9eWclE",
     category: "core-plank"
   },
-  "Prancha Lateral": {
-    muscles: "Oblíquos do Abdômen, Quadrado Lombar, Glúteo Médio",
-    prep: "Deite-se de lado apoiando o antebraço diretamente sob o ombro. Coloque as pernas estendidas uma sobre a outra.",
-    exec: "Eleve o quadril do solo até formar uma linha reta diagonal. Se houver rotação, gire o tronco trazendo o braço de cima por baixo do corpo e retorne.",
-    tips: "Mantenha o ombro de apoio firme e empurre o chão. Mantenha o quadril alto durante toda a série.",
-    errors: "Deixar o quadril cair em direção ao chão ou rotacionar o tronco para a frente de forma descontrolada.",
+  "Russian Twist com Halter": {
+    muscles: "Oblíquos, Reto Abdominal",
+    prep: "Sente-se no colchonete com joelhos flexionados. Incline o tronco ligeiramente para trás. Segure o halter.",
+    exec: "Rotacione o tronco de um lado para o outro de forma controlada, aproximando o halter do solo na lateral.",
+    tips: "Mantenha a coluna neutra e a musculatura abdominal ativada durante os giros.",
+    errors: "Girar apenas os braços em vez de realizar a rotação do tronco.",
     youtube: "RPr51FgCYbA",
     category: "core-plank"
   },
+
+  // Bodyweight Exercises
   "Flexão de Braço": {
     muscles: "Peitoral Maior, Deltoide Anterior, Tríceps Braquial",
     prep: "Apoie as mãos no chão ligeiramente mais abertas que a largura dos ombros, pés juntos. Corpo reto como uma prancha.",
@@ -1103,69 +1234,140 @@ const EXERCISE_DETAILS = {
   },
   "Flexão Pike": {
     muscles: "Deltoide Anterior (Ombro), Tríceps Braquial, Porção Superior do Peito",
-    prep: "Comece na posição de flexão e caminhe com as pontas dos pés para a frente, elevando o quadril para o alto até o corpo formar um V invertido.",
-    exec: "Desça o topo da cabeça de forma diagonal em direção ao chão à frente das mãos. Empurre o chão firmemente estendendo os braços.",
-    tips: "O movimento simula um desenvolvimento vertical para os ombros. Mantenha os joelhos estendidos ou levemente flexionados.",
-    errors: "Descer a cabeça diretamente entre as mãos, o que sobrecarrega a articulação do ombro e cervical.",
-    youtube: "BIW_B9JU8gk",
+    prep: "Fique na posição de flexão, caminhe com os pés para a frente elevando o quadril até formar um V invertido. Olhar voltado para os pés.",
+    exec: "Flexione os cotovelos descendo a cabeça diagonalmente para a frente em direção ao chão. Empurre o chão estendendo os braços.",
+    tips: "Mantenha a postura em V e empurre de volta diagonalmente para o topo, simulando um desenvolvimento militar.",
+    errors: "Bater a cabeça no chão por falta de controle ou descer verticalmente achatando o movimento.",
+    youtube: "G1b8sU3q_x8",
     category: "vertical-press"
   },
+  "Superman Dinâmico": {
+    muscles: "Eretores da Espinha, Glúteos, Posterior de Coxa, Romboides",
+    prep: "Deite-se de bruços em um colchonete com os braços estendidos à frente da cabeça e pernas esticadas.",
+    exec: "Contraia as costas e glúteos levantando simultaneamente o peitoral, braços e pernas do chão. Segure 1s e retorne devagar.",
+    tips: "Mantenha a cabeça neutra olhando para baixo para não tensionar o pescoço.",
+    errors: "Hiperestender o pescoço ou dar impulsos bruscos com a lombar.",
+    youtube: "5z68b2k9aP4",
+    category: "hinge"
+  },
+  "Puxada no Chão": {
+    muscles: "Latíssimo do Dorso, Romboides, Trapézio",
+    prep: "Deite-se de bruços, mantenha o peito ligeiramente elevado do solo e braços estendidos acima da cabeça, mãos em punho.",
+    exec: "Puxe os braços para trás flexionando os cotovelos ao lado das costelas, espremendo as escápulas como em um pulley costas. Retorne estendendo à frente.",
+    tips: "Mantenha os cotovelos e mãos sem tocar o solo durante toda a execução.",
+    errors: "Arrastar os braços no chão ou não contrair as costas no final.",
+    youtube: "orSy9wcO2RY",
+    category: "vertical-pull"
+  },
+  "Retração Escapular no Chão": {
+    muscles: "Romboides, Trapézio Médio/Inferior",
+    prep: "Deite-se de bruços, apoie a testa no solo e coloque as mãos atrás da cabeça ou estendidas em cruz.",
+    exec: "Levante apenas os braços e ombros do solo aproximando as escápulas com força. Mantenha o peito no chão e desça devagar.",
+    tips: "Foque inteiramente no movimento das escápulas aproximando-as na subida.",
+    errors: "Forçar a coluna cervical levantando a cabeça.",
+    youtube: "RkX2mvZ_V8c",
+    category: "vertical-pull"
+  },
+  "Agachamento com Pausa": {
+    muscles: "Quadríceps, Glúteo Maior, Posterior de Coxa",
+    prep: "Fique em pé, pés na largura dos ombros, braços estendidos à frente.",
+    exec: "Agache flexionando o quadril e joelhos até a paralela. Segure a posição inferior por 2s e suba de forma explosiva.",
+    tips: "A pausa remove a energia elástica, exigindo muito mais força dos quadríceps na subida.",
+    errors: "Perder a tensão e 'desabar' na pausa inferior.",
+    youtube: "kYd4XyCgYpA",
+    category: "squat"
+  },
+  "Prancha Abdominal": {
+    muscles: "Reto Abdominal, Transverso Abdominal, Ombros",
+    prep: "Apoie os antebraços no chão alinhados diretamente sob os ombros. Estenda as pernas para trás com apoio na ponta dos pés.",
+    exec: "Mantenha o corpo totalmente reto e alinhado. Contraia o abdômen, aperte as pernas e glúteos. Segure a posição respirando com calma.",
+    tips: "Imagine que está puxando o umbigo em direção à coluna. Não deixe a barriga cair e afaste as escápulas empurrando o chão.",
+    errors: "Deixar o quadril cair em direção ao chão, forçando a lombar, ou elevar muito o quadril.",
+    youtube: "b36ic1Sizzk",
+    category: "core-plank"
+  },
+  "Prancha Lateral": {
+    muscles: "Oblíquos do Abdômen, Quadrado Lombar, Glúteo Médio",
+    prep: "Deite-se de lado apoiando o antebraço diretamente sob o ombro. Coloque as pernas estendidas uma sobre a outra.",
+    exec: "Eleve o quadril do solo até formar uma linha reta diagonal. Se houver rotação, gire o tronco trazendo o braço de cima por baixo do corpo e retorne.",
+    tips: "Mantenha o ombro de apoio firme e empurre o chão. Mantenha o quadril alto durante toda a série.",
+    errors: "Deixar o quadril cair em direção ao chão ou rotacionar o tronco para a frente de forma descontrolada.",
+    youtube: "RPr51FgCYbA",
+    category: "core-plank"
+  },
   "Remada Australiana": {
-    muscles: "Latíssimo do Dorso, Romboides, Deltoide Posterior, Bíceps",
-    prep: "Posicione-se embaixo de uma barra fixa baixa ou mesa robusta. Segure na borda com pegada pronada na largura dos ombros, calcanhares no chão e corpo reto.",
-    exec: "Puxe o peito em direção à barra contraindo as escápulas e trazendo os cotovelos para trás. Retorne de forma lenta e controlada.",
-    tips: "Mantenha o corpo rígido do calcanhar à cabeça. Sinta a musculatura das costas apertar no topo.",
-    errors: "Flexionar o quadril ou pescoço tentando alcançar a barra/mesa.",
-    youtube: "p1-VrbRYnS8",
+    muscles: "Latíssimo do Dorso, Romboides, Trapézio",
+    prep: "A Remada Australiana livre sem equipamentos é substituída por exercícios como Superman Dinâmico e Puxada no Chão.",
+    exec: "Consulte as instruções do Superman Dinâmico ou Puxada no Chão.",
+    tips: "Exercício alternativo sem uso de barras ou móveis.",
+    errors: "Nenhum.",
+    youtube: "",
     category: "horizontal-pull"
   },
+  "Barra Fixa": {
+    muscles: "Latíssimo do Dorso, Romboides, Trapézio",
+    prep: "Substituído por Puxada no Chão ou Superman Dinâmico na versão peso do corpo sem equipamentos.",
+    exec: "Consulte as instruções do Superman Dinâmico ou Puxada no Chão.",
+    tips: "Exercício alternativo sem uso de barras ou móveis.",
+    errors: "Nenhum.",
+    youtube: "c_wM68S2K9E",
+    category: "vertical-pull"
+  },
+  "Mergulho Banco": {
+    muscles: "Tríceps Braquial, Deltoide Anterior",
+    prep: "Substituído por Flexão Diamante na versão peso do corpo para evitar o uso de bancos ou cadeiras adicionais.",
+    exec: "Consulte as instruções da Flexão Diamante.",
+    tips: "Exercício alternativo sem uso de apoios adicionais.",
+    errors: "Nenhum.",
+    youtube: "kY32J67-B9I",
+    category: "triceps-extension"
+  },
   "Superman": {
-    muscles: "Eretores da Espinha (Lombar), Glúteo Maior, Isquiotibiais",
-    prep: "Deite-se de bruços no chão com braços estendidos à frente e pernas retas.",
-    exec: "Eleve os braços, peito e coxas do chão simultaneamente, contraindo a cadeia posterior. Segure por 2 segundos no topo e retorne lentamente.",
-    tips: "Mantenha o olhar sempre direcionado para o chão para manter a coluna cervical neutra.",
-    errors: "Fazer o movimento de forma rápida ou dobrar os joelhos na subida das pernas.",
-    youtube: "z6PJMT2y8GQ",
+    muscles: "Eretores da Espinha, Glúteos",
+    prep: "Deite-se de bruços no solo, pernas estendidas e braços à frente.",
+    exec: "Erga braços e pernas mantendo a contração e retorne de forma lenta.",
+    tips: "Mantenha a cabeça alinhada com a coluna.",
+    errors: "Hiperestender excessivamente o pescoço.",
+    youtube: "5z68b2k9aP4",
     category: "hinge"
   },
   "Puxada Isométrica": {
-    muscles: "Romboides, Trapézio Médio/Inferior, Deltoide Posterior",
-    prep: "Fique em pé ou sentado, segurando uma toalha ou elástico bem firme à frente do peito com as mãos na largura dos ombros.",
-    exec: "Puxe os braços para trás flexionando os cotovelos ao mesmo tempo em que tensiona a toalha para fora (como se quisesse rasgá-la). Segure a contração por 2-3s.",
-    tips: "Concentre-se na retração total das escápulas (juntar os ossos das costas). Mantenha os ombros relaxados para baixo.",
-    errors: "Encolher os ombros ativando o trapézio superior.",
+    muscles: "Latíssimo do Dorso, Romboides",
+    prep: "Em pé ou deitado, simule a puxada contraindo fortemente a musculatura dorsal.",
+    exec: "Realize o movimento contraindo as costas no ponto de esforço máximo.",
+    tips: "Mantenha as escápulas retraídas.",
+    errors: "Nenhum.",
     youtube: "orSy9wcO2RY",
     category: "vertical-pull"
   },
   "Retração Escapular": {
-    muscles: "Trapézio Médio/Inferior, Romboides, Deltoide Posterior",
-    prep: "Fique de costas encostado em uma parede. Flexione os cotovelos em 90° alinhados aos ombros (em formato de L) mantendo braços e costas encostados.",
-    exec: "Deslize os braços lentamente para cima ao longo da parede sem perder o contato dos cotovelos e das mãos com a superfície. Volte trazendo os cotovelos para baixo.",
-    tips: "Mantenha o core contraído para evitar que as costelas se projetem para a frente tirando as costas da parede.",
-    errors: "Permitir que as mãos ou os cotovelos se afastem da parede durante o movimento.",
+    muscles: "Romboides, Trapézio",
+    prep: "Em pé ou deitado, posicione as escápulas e contraia.",
+    exec: "Aproxime as escápulas de forma voluntária por 2-3s.",
+    tips: "Foco no controle escapular.",
+    errors: "Nenhum.",
     youtube: "RkX2mvZ_V8c",
     category: "vertical-pull"
   },
   "Superset Ombros": {
-    muscles: "Deltoide Lateral, Deltoide Posterior, Trapézio",
-    prep: "Segure halteres em pé, postura reta para elevação lateral. Em seguida inclinará o tronco para a elevação posterior.",
-    exec: "Execute uma série completa de Elevação Lateral e, imediatamente sem descansar, incline o tronco para a frente e realize a série de Crucifixo Invertido.",
-    tips: "Use cargas moderadas. O objetivo é a exaustão acumulada e o estímulo volumétrico dos ombros.",
-    errors: "Balançar as costas de forma excessiva na tentativa de subir as cargas.",
+    muscles: "Deltoide Lateral/Posterior",
+    prep: "Realize elevações laterais simulando carga isométrica ou usando halteres.",
+    exec: "Faça movimentos lentos para manter a tensão muscular.",
+    tips: "Mantenha o controle da postura.",
+    errors: "Nenhum.",
     youtube: "bCZ5a6WQyt0",
     category: "shoulder-fly"
   },
   "Abdominal Infra": {
-    muscles: "Reto Abdominal (Foco na porção inferior), Flexores do Quadril",
-    prep: "Deite-se de costas no colchonete, mãos posicionadas sob o quadril para estabilização lombar. Pernas estendidas.",
-    exec: "Eleve as pernas retas até que fiquem verticais em relação ao quadril. Desça lentamente as pernas controlando o movimento sem encostar no chão.",
-    tips: "A lombar deve ficar pressionada contra o solo durante toda a descida das pernas. Se a lombar arquear, flexione ligeiramente os joelhos.",
-    errors: "Descer as pernas rápido sem controle ou permitir que a lombar saia do chão no final da descida.",
+    muscles: "Reto Abdominal (Inferior)",
+    prep: "Deite-se de costas no solo, mãos sob o quadril para apoiar a lombar.",
+    exec: "Eleve as pernas retas até a vertical e desça de forma controlada sem tocar o chão.",
+    tips: "Mantenha a lombar colada ao solo.",
+    errors: "Arquear as costas na descida.",
     youtube: "l4kQd9eWclE",
     category: "core-plank"
   }
 };
-
 function getBaseExerciseName(name) {
   let clean = name.split(" — ")[0].trim();
   clean = clean.replace(/\s*\(.*\)\s*/gi, "").trim();
