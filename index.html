@@ -942,28 +942,28 @@ footer p{font-size:11px;color:var(--mist);font-family:var(--font-mono);margin:0;
 <script>
 /* ======================= DADOS DO PLANO ======================= */
 const PHASES = [
-  {id:1, name:"Adaptação",           start:"2026-07-01", end:"2026-07-28", scheme:"UL"},
-  {id:2, name:"Base de Força",       start:"2026-07-29", end:"2026-09-15", scheme:"PPL"},
-  {id:3, name:"Hipertrofia",         start:"2026-09-16", end:"2026-10-27", scheme:"PPL"},
-  {id:4, name:"Interm-Avançado",     start:"2026-10-28", end:"2026-12-08", scheme:"PPL"},
-  {id:5, name:"Avançado + Fim de Ano", start:"2026-12-09", end:"2026-12-31", scheme:"PPL"},
+  {id:1, name:"Adaptação",              start:"2026-07-06", end:"2026-07-26", scheme:"UL"},
+  {id:2, name:"Volume de Hipertrofia I", start:"2026-07-27", end:"2026-09-06", scheme:"PPL"},
+  {id:3, name:"Hipertrofia Intensiva",  start:"2026-09-07", end:"2026-10-18", scheme:"PPL"},
+  {id:4, name:"Sobrecarga Progressiva", start:"2026-10-19", end:"2026-11-29", scheme:"PPL"},
+  {id:5, name:"Avançado + Fim de Ano",  start:"2026-11-30", end:"2026-12-31", scheme:"PPL"},
 ];
 
 const SETSREPS = {
-  1: "3 séries × 12–15 reps · RIR 3 · descanso 60s",
-  2: "3 séries × 10–12 reps · RIR 2–3 · descanso 60–90s",
-  3: "4 séries × 8–12 reps · RIR 2 · descanso 90s — última série bem puxada",
-  4: "4–5 séries × 6–10 reps (principais) / 10–15 (acessórios) · RIR 1–2 · drop-set na última série",
-  "5-normal": "4–5 séries × 6–10 reps · RIR 1–2 · mantendo intensidade",
-  "5-deload": "3 séries × reps confortáveis · RIR 3 · reduza ~30% da carga (semana de deload)",
-  "5-survival": "2–3 séries × 12–15 reps · qualquer versão — o objetivo é só não zerar",
+  1: "3 séries × 12–15 reps · RIR 3 · descanso 60s — foco total em execução e conexão mente-músculo, sem carga pesada ainda",
+  2: "4 séries × 8–12 reps · RIR 2 · descanso 75–90s — busque progressão de carga ou repetições toda semana (sobrecarga progressiva)",
+  3: "4 séries × 8–10 reps nos compostos e 12–15 reps nos isolados · RIR 1–2 · descanso 90s — deixe a última série de cada exercício bem próxima da falha",
+  4: "4–5 séries × 6–10 reps (principais) / 10–15 reps (acessórios) · RIR 1 · descanso 90–120s — técnica de intensidade (drop-set ou rest-pause) na última série dos compostos",
+  "5-normal": "4 séries × 8–12 reps · RIR 1–2 · descanso 90s — mantenha a intensidade apesar da rotina de fim de ano",
+  "5-deload": "2–3 séries × 12–15 reps · RIR 3–4 · reduza ~30–40% da carga — semana de deload para chegar descansado nas festas",
+  "5-survival": "2–3 séries × 12–15 reps · qualquer versão disponível — sem cobrança de performance, o objetivo é só manter o estímulo",
 };
 
 const EXERCISES = {
   UL: {
     academia:{ Superior:["Supino na máquina","Remada baixa na máquina","Desenvolvimento na máquina","Rosca no pulley","Tríceps no pulley"],
                Inferior:["Leg press 45°","Cadeira extensora","Cadeira flexora","Gêmeos na máquina em pé","Abdominal na máquina"]},
-    casa:{     Superior:["Supino no banco com halteres","Remada serrote no banco","Desenvolvimento sentado no banco","Rosca alternada","Tríceps testa no banco"],
+    casa:{     Superior:["Supino no banco com halteres","Remada curvada com halteres","Desenvolvimento sentado no banco","Rosca alternada","Tríceps testa no banco"],
                Inferior:["Agachamento goblet","Afundo búlgaro com halteres","Elevação pélvica no banco c/ halter","Elevação de gêmeos com halteres","Russian twist com halter"]},
     bodyweight:{ Superior:["Flexão de braço","Superman dinâmico","Flexão pike","Flexão diamante","Prancha com toque no ombro"],
                  Inferior:["Agachamento livre","Afundo estacionário","Elevação pélvica unilateral","Elevação de gêmeos em pé","Prancha abdominal"]},
@@ -971,18 +971,18 @@ const EXERCISES = {
   PPL: {
     academia:{ Push:["Supino na máquina","Supino inclinado na máquina","Desenvolvimento na máquina","Elevação lateral na máquina","Tríceps no pulley","Abdominal na máquina"],
                Pull:["Puxada alta no pulley","Remada baixa na máquina","Remada articulada","Rosca Scott na máquina","Rosca no pulley","Prancha lateral"],
-               Legs:["Leg press 45°","Cadeira flexora","Cadeira extensora","Elevação pélvica na máquina","Gêmeos na máquina em pé"]},
+               Legs:["Leg press 45°","Cadeira extensora","Cadeira flexora","Elevação pélvica na máquina","Gêmeos na máquina em pé"]},
     casa:{     Push:["Supino no banco com halteres","Supino inclinado no banco","Desenvolvimento sentado no banco","Superset: Elevação lateral + Elevação posterior com halteres — 3×15 cada (fixo)","Tríceps testa no banco","Abdominal com halter"],
-               Pull:["Pullover no banco com halter","Remada curvada com halteres","Remada serrote no banco","Rosca direta sentado no banco","Rosca martelo em pé","Russian twist com halter"],
-               Legs:["Afundo búlgaro com halteres no banco","Elevação pélvica no banco","Agachamento goblet","Stiff com halteres","Elevação de gêmeos com halteres"]},
-    bodyweight:{ Push:["Flexão de braço padrão","Flexão com pegada aberta","Flexão pike","Flexão diamante","Abdominal infra (elevação de pernas) — 2-3×15 (fixo)"],
-                 Pull:["Superman dinâmico","Puxada no chão (superman pulldown)","Prancha lateral com rotação","Retração escapular no chão","Prancha abdominal"],
-                 Legs:["Agachamento livre com pausa","Afundo caminhando","Elevação pélvica unilateral","Ponte de glúteo com pausa","Elevação de gêmeos em pé"]},
+               Pull:["Remada curvada com halteres","Remada serrote no banco","Pullover no banco com halter","Rosca direta sentado no banco","Rosca martelo em pé","Russian twist com halter"],
+               Legs:["Agachamento goblet","Afundo búlgaro com halteres no banco","Stiff com halteres","Elevação pélvica no banco","Elevação de gêmeos com halteres"]},
+    bodyweight:{ Push:["Flexão de braço padrão","Flexão pike","Flexão com pegada aberta","Flexão diamante","Abdominal infra (elevação de pernas) — 2-3×15 (fixo)"],
+                 Pull:["Superman dinâmico","Puxada no chão (superman pulldown)","Retração escapular no chão","Prancha lateral com rotação","Prancha abdominal"],
+                 Legs:["Agachamento livre com pausa","Afundo caminhando","Elevação pélvica unilateral","Elevação de gêmeos em pé","Prancha abdominal"]},
   },
   FULLBODY: {
-    academia:["Desenvolvimento na máquina","Remada baixa na máquina","Leg press 45°","Abdominal na máquina"],
-    casa:["Supino no banco com halteres","Remada serrote no banco","Afundo búlgaro com halteres no banco","Russian twist com halter"],
-    bodyweight:["Flexão de braço","Superman dinâmico","Agachamento livre","Prancha abdominal"],
+    academia:["Leg press 45°","Supino na máquina","Remada baixa na máquina","Desenvolvimento na máquina","Abdominal na máquina"],
+    casa:["Agachamento goblet","Supino no banco com halteres","Remada curvada com halteres","Elevação lateral","Russian twist com halter"],
+    bodyweight:["Agachamento livre","Flexão de braço","Superman dinâmico","Afundo estacionário","Prancha abdominal"],
   }
 };
 
@@ -1002,7 +1002,7 @@ const BADGES = [
   {id:"fase1", icon:"1️⃣", label:"Fase 1 Concluída", desc:"Adaptação encerrada", check:()=>todayStr()>PHASES[0].end},
   {id:"fase2", icon:"2️⃣", label:"Fase 2 Concluída", desc:"Base de força firme", check:()=>todayStr()>PHASES[1].end},
   {id:"fase4", icon:"4️⃣", label:"Fase 4 Concluída", desc:"Nível avançado alcançado", check:()=>todayStr()>PHASES[3].end},
-  {id:"jornada", icon:"🎯", label:"Jornada Completa", desc:"01/07 → 31/12 cumprido", check:()=>todayStr()>PHASES[4].end},
+  {id:"jornada", icon:"🎯", label:"Jornada Completa", desc:"06/07 → 31/12 cumprido", check:()=>todayStr()>PHASES[4].end},
 ];
 
 /* ======================= DADOS DOS EXERCÍCIOS ======================= */
@@ -1462,29 +1462,6 @@ const EXERCISE_DETAILS = {
     youtube: "ixJcUH8AlL8",
     category: "core-plank"
   }
-};capular.",
-    errors: "Nenhum.",
-    youtube: "RkX2mvZ_V8c",
-    category: "vertical-pull"
-  },
-  "Superset Ombros": {
-    muscles: "Deltoide Lateral/Posterior",
-    prep: "Realize elevações laterais simulando carga isométrica ou usando halteres.",
-    exec: "Faça movimentos lentos para manter a tensionamento.",
-    tips: "Mantenha o controle da postura.",
-    errors: "Nenhum.",
-    youtube: "bCZ5a6WQyt0",
-    category: "shoulder-fly"
-  },
-  "Abdominal Infra": {
-    muscles: "Reto Abdominal (Inferior)",
-    prep: "Deite-se de costas no solo, mãos sob o quadril para apoiar a lombar.",
-    exec: "Eleve as pernas retas até a vertical e desça de forma controlada sem tocar o chão.",
-    tips: "Mantenha a lombar colada ao solo.",
-    errors: "Arquear as costas na descida.",
-    youtube: "l4kQd9eWclE",
-    category: "core-plank"
-  }
 };
 function getBaseExerciseName(name) {
   let clean = name.split(" — ")[0].trim();
@@ -1575,8 +1552,8 @@ function getSessionInfo(dateStr){
   let scheme = phase.scheme;
   let submode = null;
   if(phase.id === 5){
-    if(dateStr <= "2026-12-15") submode = "normal";
-    else if(dateStr <= "2026-12-22") submode = "deload";
+    if(dateStr <= "2026-12-13") submode = "normal";
+    else if(dateStr <= "2026-12-20") submode = "deload";
     else { submode = "survival"; scheme = "FULLBODY"; }
   }
   const wd = weekdayOf(dateStr);
@@ -1790,7 +1767,7 @@ function renderToday(){
 
   if(info.outOfRange){
     card.innerHTML = `<div class="card-body"><h2 class="session-title">Fora do período do plano</h2>
-    <p class="session-sub">Este plano cobre 01/07 a 31/12/2026.</p></div>`;
+    <p class="session-sub">Este plano cobre 06/07 a 31/12/2026.</p></div>`;
     return;
   }
 
