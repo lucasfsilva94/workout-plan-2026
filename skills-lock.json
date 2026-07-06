@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "workout-program-designer": {
+      "source": "onewave-ai/claude-skills",
+      "sourceType": "github",
+      "skillPath": "workout-program-designer/SKILL.md",
+      "computedHash": "31d0b2de6985dcc62bdb2e3bb8582c7328618fe021654f469a97404fa911ee59"
+    }
+  }
+}
