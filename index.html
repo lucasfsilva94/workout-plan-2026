@@ -969,14 +969,14 @@ const EXERCISES = {
                  Inferior:["Agachamento livre","Afundo estacionário","Elevação pélvica unilateral","Elevação de gêmeos em pé","Prancha abdominal"]},
   },
   PPL: {
-    academia:{ Push:["Supino na máquina","Supino inclinado na máquina","Desenvolvimento na máquina","Elevação lateral na máquina","Tríceps no pulley","Abdominal na máquina"],
+    academia:{ Push:["Supino inclinado na máquina","Supino na máquina","Desenvolvimento na máquina","Superset: Elevação lateral na máquina + Crucifixo invertido na máquina — 3×15 cada (fixo)","Tríceps no pulley","Abdominal na máquina"],
                Pull:["Puxada alta no pulley","Remada baixa na máquina","Remada articulada","Rosca Scott na máquina","Rosca no pulley","Prancha lateral"],
                Legs:["Leg press 45°","Cadeira extensora","Cadeira flexora","Elevação pélvica na máquina","Gêmeos na máquina em pé"]},
-    casa:{     Push:["Supino no banco com halteres","Supino inclinado no banco","Desenvolvimento sentado no banco","Superset: Elevação lateral + Elevação posterior com halteres — 3×15 cada (fixo)","Tríceps testa no banco","Abdominal com halter"],
+    casa:{     Push:["Supino inclinado no banco","Supino no banco com halteres","Desenvolvimento sentado no banco","Superset: Elevação lateral + Elevação posterior com halteres — 3×15 cada (fixo)","Tríceps testa no banco","Abdominal com halter"],
                Pull:["Remada curvada com halteres","Remada serrote no banco","Pullover no banco com halter","Rosca direta sentado no banco","Rosca martelo em pé","Russian twist com halter"],
                Legs:["Agachamento goblet","Afundo búlgaro com halteres no banco","Stiff com halteres","Elevação pélvica no banco","Elevação de gêmeos com halteres"]},
-    bodyweight:{ Push:["Flexão de braço padrão","Flexão pike","Flexão com pegada aberta","Flexão diamante","Abdominal infra (elevação de pernas) — 2-3×15 (fixo)"],
-                 Pull:["Superman dinâmico","Puxada no chão (superman pulldown)","Retração escapular no chão","Prancha lateral com rotação","Prancha abdominal"],
+    bodyweight:{ Push:["Flexão de braço padrão","Flexão pike","Flexão pike elevada (pés no banco/sofá)","Flexão diamante","Abdominal infra (elevação de pernas) — 2-3×15 (fixo)"],
+                 Pull:["Superman dinâmico","Puxada no chão (superman pulldown)","Anjo da neve invertido no chão","Retração escapular no chão","Prancha lateral com rotação"],
                  Legs:["Agachamento livre com pausa","Afundo caminhando","Elevação pélvica unilateral","Elevação de gêmeos em pé","Prancha abdominal"]},
   },
   FULLBODY: {
@@ -1042,6 +1042,15 @@ const EXERCISE_DETAILS = {
     tips: "Mantenha o pescoço e trapézio relaxados, concentrando a força na lateral dos ombros.",
     errors: "Encolher os ombros no início do movimento ou usar impulso para subir.",
     youtube: "jTtN4KpiRLE",
+    category: "shoulder-fly"
+  },
+  "Superset Ombros Máquina": {
+    muscles: "Deltoide Lateral, Deltoide Posterior, Trapézio",
+    prep: "Ajuste a máquina de elevação lateral com os antebraços apoiados nos rolos. Ao terminar as repetições, sem descansar, sente-se de frente para a máquina de crucifixo invertido com o peito apoiado no estofado.",
+    exec: "1) Elevação lateral: eleve os braços para fora até ficarem paralelos ao solo e desça controlado. 2) Crucifixo invertido: puxe as manoplas para trás abrindo os braços, apertando as escápulas no final. As duas partes formam 1 série do superset, sem descanso entre elas.",
+    tips: "Use uma carga mais leve na segunda parte (crucifixo invertido) — o deltoide posterior fadiga muito mais rápido que o lateral. Priorize amplitude e controle, não peso.",
+    errors: "Encolher os ombros na elevação lateral ou tirar o peito do apoio no crucifixo invertido para compensar carga alta.",
+    youtube: "mtZOrNqFywg",
     category: "shoulder-fly"
   },
   "Tríceps no Pulley": {
@@ -1336,6 +1345,24 @@ const EXERCISE_DETAILS = {
     youtube: "niJaOQvRHJg",
     category: "vertical-press"
   },
+  "Flexão Pike Elevada": {
+    muscles: "Deltoide Anterior/Lateral, Trapézio, Tríceps Braquial, Porção Superior do Peito",
+    prep: "Coloque os pés sobre um banco, sofá ou cadeira estável. Apoie as mãos no chão na largura dos ombros e eleve o quadril, formando um V invertido mais acentuado que a flexão pike no solo.",
+    exec: "Flexione os cotovelos descendo a cabeça diagonalmente em direção ao chão, entre as mãos. Empurre o chão estendendo os braços até quase a extensão total, simulando um desenvolvimento militar de pé.",
+    tips: "Quanto mais alto o apoio dos pés, mais peso corporal recai sobre os ombros — regule a altura conforme sua força. É a progressão natural da flexão pike rumo à flexão de parada de mão.",
+    errors: "Perder o alinhamento do V invertido deixando o quadril cair, ou apoiar a cabeça no chão com impacto por falta de controle.",
+    youtube: "3VR5ZRLRCuQ",
+    category: "vertical-press"
+  },
+  "Anjo da Neve Invertido": {
+    muscles: "Deltoide Posterior, Romboides, Trapézio Médio/Inferior, Eretores da Espinha",
+    prep: "Deite-se de bruços no colchonete, testa apoiada no chão e braços estendidos ao lado do corpo, palmas viradas para baixo.",
+    exec: "Eleve os braços e a parte superior do peito levemente do solo. Deslize os braços em um arco amplo, dos quadris até acima da cabeça (como um anjo na neve), apertando as escápulas durante todo o percurso. Retorne pelo mesmo caminho de forma controlada.",
+    tips: "Mantenha os braços a poucos centímetros do chão durante todo o arco — a tensão aumenta conforme os braços sobem acima da cabeça.",
+    errors: "Fazer o movimento rápido demais perdendo a tensão, ou hiperestender o pescoço olhando para frente.",
+    youtube: "wveAm2b0cFs",
+    category: "vertical-pull"
+  },
   "Superman Dinâmico": {
     muscles: "Eretores da Espinha, Glúteos, Posterior de Coxa, Romboides",
     prep: "Deite-se de bruços em um colchonete com os braços estendidos à frente da cabeça e pernas esticadas.",
@@ -1445,12 +1472,12 @@ const EXERCISE_DETAILS = {
     category: "vertical-pull"
   },
   "Superset Ombros": {
-    muscles: "Deltoide Lateral/Posterior",
-    prep: "Realize elevações laterais simulando carga isométrica ou usando halteres.",
-    exec: "Faça movimentos lentos para manter a tensionamento.",
-    tips: "Mantenha o controle da postura.",
-    errors: "Nenhum.",
-    youtube: "bCZ5a6WQyt0",
+    muscles: "Deltoide Lateral, Deltoide Posterior, Trapézio",
+    prep: "Em pé com um halter em cada mão, joelhos levemente flexionados. Ao terminar a elevação lateral, sem descansar, incline o tronco a ~45° para a elevação posterior.",
+    exec: "1) Elevação lateral: eleve os halteres para os lados até a altura dos ombros e desça controlado. 2) Elevação posterior: com o tronco inclinado para a frente, eleve os halteres para os lados/trás, apertando as escápulas no topo. As duas partes formam 1 série do superset, sem descanso entre elas.",
+    tips: "Use uma carga mais leve na elevação posterior — o deltoide posterior é pequeno e fadiga rápido. Priorize amplitude e controle, não peso.",
+    errors: "Balançar o tronco (impulso) em qualquer uma das duas fases ou elevar os halteres acima da linha dos ombros.",
+    youtube: "nXxDgKRpgC0",
     category: "shoulder-fly"
   },
   "Abdominal Infra": {
@@ -1466,7 +1493,12 @@ const EXERCISE_DETAILS = {
 function getBaseExerciseName(name) {
   let clean = name.split(" — ")[0].trim();
   clean = clean.replace(/\s*\(.*\)\s*/gi, "").trim();
-  
+
+  // Supersets (checar primeiro: contêm substrings de nomes de exercícios individuais,
+  // então precisam ser identificados antes que os checks genéricos abaixo os capturem)
+  if (clean.includes("Superset: Elevação lateral na máquina")) return "Superset Ombros Máquina";
+  if (clean.includes("Superset: Elevação lateral")) return "Superset Ombros";
+
   // Gym Machine Exercises
   if (clean.includes("Supino na máquina")) return "Supino na Máquina";
   if (clean.includes("Supino inclinado na máquina")) return "Supino Inclinado na Máquina";
@@ -1514,13 +1546,14 @@ function getBaseExerciseName(name) {
   if (clean.includes("Prancha abdominal") || clean.includes("Prancha com toque")) return "Prancha Abdominal";
   if (clean.includes("Prancha lateral")) return "Prancha Lateral";
   if (clean.includes("Flexão diamante")) return "Flexão Diamante";
+  if (clean.includes("Flexão pike elevada")) return "Flexão Pike Elevada";
   if (clean.includes("Flexão pike")) return "Flexão Pike";
   if (clean.includes("Flexão")) return "Flexão de Braço";
+  if (clean.includes("Anjo da neve invertido")) return "Anjo da Neve Invertido";
   if (clean.includes("Remada australiana")) return "Remada Australiana";
   if (clean.includes("Superman")) return "Superman";
   if (clean.includes("Puxada isométrica")) return "Puxada Isométrica";
   if (clean.includes("Retração escapular")) return "Retração Escapular";
-  if (clean.includes("Superset: Elevação lateral")) return "Superset Ombros";
   if (clean.includes("Abdominal infra")) return "Abdominal Infra";
   
   return clean;
