@@ -2405,7 +2405,21 @@ document.getElementById("installBtn").addEventListener("click", async ()=>{
 });
 if("serviceWorker" in navigator){
   window.addEventListener("load", ()=>{
-    navigator.serviceWorker.register("service-worker.js").catch(()=>{ /* ambiente sem suporte a SW, app segue funcionando normalmente */ });
+    navigator.serviceWorker.register("service-worker.js")
+      .then((reg) => {
+        // Force checking for updates immediately on page load
+        reg.update();
+      })
+      .catch(()=>{ /* ambiente sem suporte a SW, app segue funcionando normalmente */ });
+  });
+
+  // Auto reload when the service worker is updated and takes control
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (!refreshing) {
+      refreshing = true;
+      window.location.reload();
+    }
   });
 }
 </script>
