@@ -189,6 +189,197 @@ button{font-family:inherit;cursor:pointer;}
 .badge{
   background:var(--paper-2);border:1px solid var(--hairline);border-radius:10px;padding:12px;text-align:center;
   opacity:0.4;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Workout Plan 2026</title>
+<meta name="theme-color" content="#14181C">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181C;
+  --paper:#1C2229;
+  --paper-2:#232B33;
+  --paper-3:#2B343D;
+  --ember:#FF7A45;
+  --ember-dim:#C9602F;
+  --sage:#8FBF9F;
+  --sage-dim:#4F6B58;
+  --chalk:#EDEEE9;
+  --mist:#8B95A1;
+  --hairline:#333D47;
+  --danger:#E2726B;
+  --font-display:'Space Grotesk',-apple-system,'Segoe UI',sans-serif;
+  --font-body:'Inter',-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'IBM Plex Mono','Courier New',monospace;
+  --radius:14px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--ink);
+  color:var(--chalk);
+  font-family:var(--font-body);
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+a{color:var(--ember);}
+button{font-family:inherit;cursor:pointer;}
+:focus-visible{outline:2px solid var(--ember);outline-offset:2px;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:0.001ms !important;transition-duration:0.001ms !important;}}
+
+.app{max-width:1180px;margin:0 auto;padding:20px 20px 60px;}
+
+/* ---------- HEADER ---------- */
+.app-header{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;margin-bottom:22px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:40px;height:40px;border-radius:10px;background:var(--ember);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-display);
+  font-weight:700;color:var(--ink);font-size:18px;flex-shrink:0;
+}
+.brand-text h1{font-family:var(--font-display);font-size:18px;margin:0;font-weight:600;letter-spacing:0.2px;}
+.brand-text p{margin:0;font-size:12px;color:var(--mist);font-family:var(--font-mono);}
+.header-chips{display:flex;gap:10px;flex-wrap:wrap;}
+.chip{
+  background:var(--paper);border:1px solid var(--hairline);border-radius:999px;
+  padding:8px 14px;font-size:13px;display:flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);color:var(--chalk);
+}
+.chip strong{font-family:var(--font-display);color:var(--ember);font-weight:600;}
+#installBtn{display:none;background:var(--ember);color:var(--ink);border:none;border-radius:999px;padding:8px 16px;font-weight:600;font-size:13px;}
+
+/* ---------- LAYOUT ---------- */
+.layout{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start;}
+@media (max-width:900px){.layout{grid-template-columns:1fr;}}
+
+/* ---------- JOURNEY RAIL (desktop vertical / mobile horizontal) ---------- */
+.journey-rail{
+  background:var(--paper);border:1px solid var(--hairline);border-radius:var(--radius);
+  padding:18px 14px;position:sticky;top:20px;
+}
+.journey-rail h2{font-family:var(--font-display);font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--mist);margin:0 0 14px;}
+.phase-item{display:flex;gap:10px;padding:10px 4px;border-left:2px solid var(--hairline);margin-left:8px;position:relative;}
+.phase-item:last-child{border-left-color:transparent;}
+.phase-dot{
+  position:absolute;left:-11px;top:10px;width:18px;height:18px;border-radius:50%;
+  background:var(--paper-2);border:2px solid var(--hairline);
+  display:flex;align-items:center;justify-content:center;font-size:10px;font-family:var(--font-mono);color:var(--mist);
+}
+.phase-item.done .phase-dot{background:var(--sage-dim);border-color:var(--sage);color:var(--chalk);}
+.phase-item.current .phase-dot{background:var(--ember);border-color:var(--ember);color:var(--ink);}
+.phase-item .phase-info{padding-left:8px;}
+.phase-info .name{font-size:13px;font-weight:600;}
+.phase-info .dates{font-size:11px;color:var(--mist);font-family:var(--font-mono);}
+.phase-item.current .phase-info .name{color:var(--ember);}
+@media (max-width:900px){
+  .journey-rail{position:static;display:flex;overflow-x:auto;gap:0;padding:14px;}
+  .journey-rail h2{display:none;}
+  .phase-item{flex-direction:column;border-left:none;border-top:2px solid var(--hairline);min-width:120px;margin-left:0;padding-top:16px;}
+  .phase-item:last-child{border-top-color:var(--hairline);}
+  .phase-dot{left:0;top:-11px;}
+}
+
+/* ---------- TODAY CARD (signature: ticket / stamp card) ---------- */
+.today-card{
+  display:grid;grid-template-columns:120px 1fr;
+  background:var(--paper);border:1px solid var(--hairline);border-radius:var(--radius);
+  overflow:hidden;position:relative;margin-bottom:20px;
+}
+@media (max-width:640px){.today-card{grid-template-columns:1fr;}}
+.stub{
+  background:var(--paper-2);padding:20px 12px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;border-right:1px dashed var(--hairline);text-align:center;
+}
+@media (max-width:640px){.stub{border-right:none;border-bottom:1px dashed var(--hairline);flex-direction:row;justify-content:space-between;padding:14px 18px;}}
+.stub .weekday{font-family:var(--font-mono);font-size:11px;color:var(--mist);text-transform:uppercase;letter-spacing:1px;}
+.stub .daynum{font-family:var(--font-display);font-size:42px;font-weight:700;line-height:1;color:var(--chalk);}
+.stub .month{font-family:var(--font-mono);font-size:11px;color:var(--mist);}
+.stub .phase-tag{margin-top:10px;font-size:10px;font-family:var(--font-mono);background:var(--paper-3);border-radius:999px;padding:4px 9px;color:var(--sage);}
+.card-body{padding:22px 24px;position:relative;}
+.card-body .session-title{font-family:var(--font-display);font-size:24px;font-weight:600;margin:0 0 4px;}
+.card-body .session-sub{font-family:var(--font-mono);font-size:12.5px;color:var(--mist);margin:0 0 16px;}
+.variant-tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap;}
+.variant-tab{
+  background:var(--paper-2);border:1px solid var(--hairline);color:var(--mist);
+  border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:500;
+}
+.variant-tab.active{background:var(--ember);border-color:var(--ember);color:var(--ink);font-weight:600;}
+.exercise-list{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:7px;}
+.exercise-list li{
+  font-size:14.5px;padding:8px 12px;background:var(--paper-2);border-radius:8px;
+  display:flex;align-items:baseline;gap:8px;
+}
+.exercise-list li .n{font-family:var(--font-mono);color:var(--mist);font-size:12px;flex-shrink:0;}
+.rest-note{font-size:14px;color:var(--sage);background:var(--paper-2);padding:14px;border-radius:8px;margin-bottom:16px;}
+.check-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.check-btn{
+  background:var(--ember);color:var(--ink);border:none;border-radius:10px;
+  padding:13px 22px;font-weight:700;font-size:15px;font-family:var(--font-display);
+  display:flex;align-items:center;gap:8px;transition:transform .12s ease, background .15s ease;
+}
+.check-btn:hover{transform:translateY(-1px);}
+.check-btn.done{background:var(--sage);}
+.xp-hint{font-family:var(--font-mono);font-size:12px;color:var(--mist);}
+.stamp{
+  position:absolute;top:20px;right:24px;font-family:var(--font-display);font-weight:700;
+  color:var(--sage);border:3px solid var(--sage);border-radius:8px;padding:6px 12px;font-size:13px;
+  transform:rotate(-8deg) scale(0);letter-spacing:1px;opacity:0;pointer-events:none;
+  transition:transform .45s cubic-bezier(.2,1.6,.4,1), opacity .3s ease;
+}
+.stamp.show{transform:rotate(-8deg) scale(1);opacity:1;}
+
+/* ---------- STATS ---------- */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;}
+@media (max-width:640px){.stats-row{grid-template-columns:repeat(2,1fr);}}
+.stat-card{background:var(--paper);border:1px solid var(--hairline);border-radius:var(--radius);padding:16px;}
+.stat-card .label{font-size:11px;color:var(--mist);text-transform:uppercase;letter-spacing:0.6px;font-family:var(--font-mono);}
+.stat-card .value{font-family:var(--font-display);font-size:26px;font-weight:700;margin-top:4px;}
+.level-bar{height:6px;background:var(--paper-2);border-radius:999px;margin-top:10px;overflow:hidden;}
+.level-bar-fill{height:100%;background:var(--ember);border-radius:999px;transition:width .4s ease;}
+
+/* ---------- JOURNEY MAP (calendar heatmap) ---------- */
+.section-title{font-family:var(--font-display);font-size:15px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:10px;}
+.section-title .eyebrow{font-family:var(--font-mono);font-size:11px;color:var(--mist);text-transform:uppercase;letter-spacing:1px;font-weight:400;}
+.journey-map{background:var(--paper);border:1px solid var(--hairline);border-radius:var(--radius);padding:18px;margin-bottom:20px;}
+.months-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:900px){.months-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:520px){.months-grid{grid-template-columns:1fr;}}
+.month-block .month-title{font-family:var(--font-mono);font-size:12px;color:var(--mist);margin-bottom:6px;text-transform:capitalize;}
+.week-header,.week-row{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
+.week-header span{font-size:9px;color:var(--mist);text-align:center;font-family:var(--font-mono);}
+.day-cell{
+  aspect-ratio:1;border-radius:5px;background:var(--paper-2);border:1px solid var(--hairline);
+  display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--mist);font-family:var(--font-mono);
+}
+.day-cell.empty{background:transparent;border:none;}
+.day-cell.future{opacity:0.35;}
+.day-cell.rest{background:var(--paper-3);color:var(--mist);}
+.day-cell.missed{border:1px dashed var(--hairline);color:var(--mist);}
+.day-cell.trained{background:var(--sage);border-color:var(--sage);color:var(--ink);font-weight:600;}
+.day-cell.is-today{box-shadow:0 0 0 2px var(--ember);}
+.day-cell:not(.empty):not(.future){cursor:pointer;}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:11px;color:var(--mist);font-family:var(--font-mono);}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block;}
+
+/* ---------- BADGES ---------- */
+.badges-section{background:var(--paper);border:1px solid var(--hairline);border-radius:var(--radius);padding:18px;margin-bottom:20px;}
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+.badge{
+  background:var(--paper-2);border:1px solid var(--hairline);border-radius:10px;padding:12px;text-align:center;
+  opacity:0.4;
 }
 .badge.unlocked{opacity:1;border-color:var(--ember-dim);}
 .badge .icon{font-size:22px;}
@@ -208,6 +399,98 @@ button{font-family:inherit;cursor:pointer;}
 footer{margin-top:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
 footer p{font-size:11px;color:var(--mist);font-family:var(--font-mono);margin:0;}
 #resetBtn{background:transparent;border:1px solid var(--hairline);color:var(--danger);border-radius:8px;padding:6px 12px;font-size:11px;}
+
+/* ---------- HISTORY MODAL ---------- */
+.history-modal-overlay{
+  position:fixed;inset:0;background:rgba(10,12,14,0.76);display:none;
+  align-items:center;justify-content:center;z-index:110;padding:20px;
+}
+.history-modal-overlay.open{display:flex;}
+.history-modal-box{
+  background:var(--paper);border:1px solid var(--hairline);border-radius:var(--radius);
+  max-width:480px;width:100%;position:relative;overflow:hidden;
+  animation:modalIn .2s ease;
+  box-shadow:0 24px 60px rgba(0,0,0,0.55);
+}
+.history-modal-header{
+  background:var(--paper-2);border-bottom:1px solid var(--hairline);
+  padding:20px 24px 16px;
+}
+.history-modal-date{
+  font-family:var(--font-mono);font-size:11px;color:var(--mist);
+  text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;
+}
+.history-modal-title{
+  font-family:var(--font-display);font-size:20px;font-weight:700;margin:0;
+  display:flex;align-items:center;gap:10px;
+}
+.history-status-badge{
+  font-size:11px;font-family:var(--font-mono);font-weight:600;padding:3px 9px;
+  border-radius:999px;letter-spacing:0.5px;
+}
+.history-status-badge.full{background:rgba(143,191,159,0.18);color:var(--sage);border:1px solid var(--sage-dim);}
+.history-status-badge.partial{background:rgba(255,122,69,0.12);color:var(--ember);border:1px solid var(--ember-dim);}
+.history-modal-body{padding:20px 24px;}
+.history-meta-row{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;
+}
+.history-meta-chip{
+  background:var(--paper-2);border:1px solid var(--hairline);border-radius:999px;
+  padding:6px 13px;font-size:12px;font-family:var(--font-mono);
+  display:flex;align-items:center;gap:6px;color:var(--chalk);
+}
+.history-meta-chip .chip-icon{font-size:13px;}
+.history-ex-title{
+  font-family:var(--font-mono);font-size:10.5px;color:var(--ember);
+  text-transform:uppercase;letter-spacing:0.8px;margin:0 0 10px;
+}
+.history-ex-list{
+  list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:6px;
+  max-height:220px;overflow-y:auto;
+}
+.history-ex-list::-webkit-scrollbar{width:4px;}
+.history-ex-list::-webkit-scrollbar-track{background:transparent;}
+.history-ex-list::-webkit-scrollbar-thumb{background:var(--hairline);border-radius:999px;}
+.history-ex-item{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 12px;border-radius:8px;
+  font-size:13.5px;
+  background:var(--paper-2);
+  border:1px solid transparent;
+  transition:border-color .15s ease;
+}
+.history-ex-item.done{
+  border-color:var(--sage-dim);
+  background:rgba(79,107,88,0.12);
+}
+.history-ex-item.done .hist-check{color:var(--sage);}
+.history-ex-item .hist-check{font-size:13px;flex-shrink:0;color:var(--hairline);width:16px;text-align:center;}
+.history-modal-footer{
+  display:flex;gap:10px;align-items:center;padding-top:4px;
+}
+.history-unmark-btn{
+  background:transparent;border:1px solid var(--hairline);color:var(--danger);
+  border-radius:8px;padding:9px 16px;font-size:12.5px;font-family:var(--font-body);
+  cursor:pointer;transition:background .15s ease,border-color .15s ease;
+}
+.history-unmark-btn:hover{
+  background:rgba(226,114,107,0.08);border-color:var(--danger);
+}
+.history-close-btn{
+  background:var(--ember);color:var(--ink);border:none;border-radius:8px;
+  padding:9px 20px;font-size:13px;font-weight:700;font-family:var(--font-display);
+  cursor:pointer;flex:1;transition:background .15s ease;
+}
+.history-close-btn:hover{background:#f46b30;}
+.history-modal-close{
+  position:absolute;top:14px;right:14px;background:var(--paper-3);border:1px solid var(--hairline);
+  color:var(--mist);border-radius:8px;width:28px;height:28px;font-size:14px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;
+}
+.history-progress-bar{height:4px;background:var(--paper-3);border-radius:0;overflow:hidden;}
+.history-progress-fill{height:100%;border-radius:0;transition:width .4s ease;}
+.history-progress-fill.full{background:var(--sage);}
+.history-progress-fill.partial{background:var(--ember);}
 
 /* ---------- EXERCISE LINK + MODAL + CHECKBOX ---------- */
 .ex-link{
@@ -815,6 +1098,30 @@ footer p{font-size:11px;color:var(--mist);font-family:var(--font-mono);margin:0;
 </head>
 <body>
 <div id="toastWrap"></div>
+
+<!-- HISTORY MODAL -->
+<div class="history-modal-overlay" id="historyModal">
+  <div class="history-modal-box">
+    <button class="history-modal-close" id="historyModalClose" aria-label="Fechar">✕</button>
+    <div class="history-progress-bar"><div class="history-progress-fill" id="historyProgressFill"></div></div>
+    <div class="history-modal-header">
+      <div class="history-modal-date" id="historyModalDate"></div>
+      <div class="history-modal-title">
+        <span id="historyModalSession"></span>
+        <span class="history-status-badge" id="historyStatusBadge"></span>
+      </div>
+    </div>
+    <div class="history-modal-body">
+      <div class="history-meta-row" id="historyMetaRow"></div>
+      <div class="history-ex-title">Exercícios</div>
+      <ul class="history-ex-list" id="historyExList"></ul>
+      <div class="history-modal-footer">
+        <button class="history-unmark-btn" id="historyUnmarkBtn">Desmarcar treino</button>
+        <button class="history-close-btn" id="historyCloseBtn">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="modal-overlay" id="exModal">
   <div class="modal-box modal-expanded">
     <button class="modal-close" id="modalCloseBtn" aria-label="Fechar">✕</button>
@@ -1007,7 +1314,6 @@ const BADGES = [
 
 /* ======================= DADOS DOS EXERCÍCIOS ======================= */
 const EXERCISE_DETAILS = {
-  // Gym Machine Exercises
   "Supino na Máquina": {
     muscles: "Peitoral Maior, Deltoide Anterior, Tríceps Braquial",
     prep: "Ajuste o banco da máquina para que as manoplas fiquem na linha média do peitoral. Sente-se com as costas e a cabeça bem apoiadas no encosto.",
@@ -1161,8 +1467,6 @@ const EXERCISE_DETAILS = {
     youtube: "KHjb1PM4yc4",
     category: "core-plank"
   },
-
-  // Home/Dumbbell Exercises
   "Supino Reto": {
     muscles: "Peitoral Maior, Deltoide Anterior, Tríceps Braquial",
     prep: "Deite-se no banco plano, apoie os pés firmes no chão, contraia as escápulas jogando os ombros para trás e segure os halteres acima do peito com os braços estendidos.",
@@ -1316,8 +1620,6 @@ const EXERCISE_DETAILS = {
     youtube: "8qS2zuyQ_5I",
     category: "core-plank"
   },
-
-  // Bodyweight Exercises
   "Flexão de Braço": {
     muscles: "Peitoral Maior, Deltoide Anterior, Tríceps Braquial",
     prep: "Apoie as mãos no chão ligeiramente mais abertas que a largura dos ombros, pés juntos. Corpo reto como uma prancha.",
@@ -1363,1065 +1665,6 @@ const EXERCISE_DETAILS = {
     youtube: "wveAm2b0cFs",
     category: "vertical-pull"
   },
-  "Superman Dinâmico": {
-    muscles: "Eretores da Espinha, Glúteos, Posterior de Coxa, Romboides",
-    prep: "Deite-se de bruços em um colchonete com os braços estendidos à frente da cabeça e pernas esticadas.",
-    exec: "Contraia as costas e glúteos levantando simultaneamente o peitoral, braços e pernas do chão. Segure 1s e retorne devagar.",
-    tips: "Mantenha a cabeça neutra olhando para baixo para não tensionar o pescoço.",
-    errors: "Hiperestender o pescoço ou dar impulsos bruscos com a lombar.",
-    youtube: "fvRNcCjS_8g",
-    category: "hinge"
-  },
-  "Puxada no Chão": {
-    muscles: "Latíssimo do Dorso, Romboides, Trapézio",
-    prep: "Deite-se de bruços, mantenha o peito ligeiramente elevado do solo e braços estendidos acima da cabeça, mãos em punho.",
-    exec: "Puxe os braços para trás flexionando os cotovelos ao lado das costelas, espremendo as escápulas como em um pulley costas. Retorne estendendo à frente.",
-    tips: "Mantenha os cotovelos e mãos sem tocar o solo durante toda a execução.",
-    errors: "Arrastar os braços no chão ou não contrair as costas no final.",
-    youtube: "orSy9wcO2RY",
-    category: "vertical-pull"
-  },
-  "Retração Escapular no Chão": {
-    muscles: "Romboides, Trapézio Médio/Inferior",
-    prep: "Deite-se de bruços, apoie a testa no solo e coloque as mãos atrás da cabeça ou estendidas em cruz.",
-    exec: "Levante apenas os braços e ombros do solo aproximando as escápulas com força. Mantenha o peito no chão e desça devagar.",
-    tips: "Foque inteiramente no movimento das escápulas aproximando-as na subida.",
-    errors: "Forçar a coluna cervical levantando a cabeça.",
-    youtube: "RkX2mvZ_V8c",
-    category: "vertical-pull"
-  },
-  "Agachamento com Pausa": {
-    muscles: "Quadríceps, Glúteo Maior, Posterior de Coxa",
-    prep: "Fique em pé, pés na largura dos ombros, braços estendidos à frente.",
-    exec: "Agache flexionando o quadril e joelhos até a paralela. Segure a posição inferior por 2s e suba de forma explosiva.",
-    tips: "A pausa remove a energia elástica, exigindo muito mais força dos quadríceps na subida.",
-    errors: "Perder a tensão e 'desabar' na pausa inferior.",
-    youtube: "M2QvkPfmvSE",
-    category: "squat"
-  },
-  "Prancha Abdominal": {
-    muscles: "Reto Abdominal, Transverso Abdominal, Ombros",
-    prep: "Apoie os antebraços no chão alinhados diretamente sob os ombros. Estenda as pernas para trás com apoio na ponta dos pés.",
-    exec: "Mantenha o corpo totalmente reto e alinhado. Contraia o abdômen, aperte as pernas e glúteos. Segure a posição respirando com calma.",
-    tips: "Imagine que está puxando o umbigo em direção à coluna. Não deixe a barriga cair e afaste as escápulas empurrando o chão.",
-    errors: "Deixar o quadril cair em direção ao chão, forçando a lombar, ou elevar muito o quadril.",
-    youtube: "b36ic1Sizzk",
-    category: "core-plank"
-  },
-  "Prancha Lateral": {
-    muscles: "Oblíquos do Abdômen, Quadrado Lombar, Glúteo Médio",
-    prep: "Deite-se de lado apoiando o antebraço diretamente sob o ombro. Coloque as pernas estendidas uma sobre a outra.",
-    exec: "Eleve o quadril do solo até formar uma linha reta diagonal. Se houver rotação, gire o tronco trazendo o braço de cima por baixo do corpo e retorne.",
-    tips: "Mantenha o ombro de apoio firme e empurre o chão. Mantenha o quadril alto durante toda a série.",
-    errors: "Deixar o quadril cair em direção ao chão ou rotacionar o tronco para a frente de forma descontrolada.",
-    youtube: "RPr51FgCYbA",
-    category: "core-plank"
-  },
-  "Remada Australiana": {
-    muscles: "Latíssimo do Dorso, Romboides, Trapézio",
-    prep: "A Remada Australiana livre sem equipamentos é substituída por exercícios como Superman Dinâmico e Puxada no Chão.",
-    exec: "Consulte as instruções do Superman Dinâmico ou Puxada no Chão.",
-    tips: "Exercício alternativo sem uso de barras ou móveis.",
-    errors: "Nenhum.",
-    youtube: "P4CziYtmsUI",
-    category: "horizontal-pull"
-  },
-  "Barra Fixa": {
-    muscles: "Latíssimo do Dorso, Romboides, Trapézio",
-    prep: "Substituído por Puxada no Chão ou Superman Dinâmico na versão peso do corpo sem equipamentos.",
-    exec: "Consulte as instruções do Superman Dinâmico ou Puxada no Chão.",
-    tips: "Exercício alternativo sem uso de barras ou móveis.",
-    errors: "Nenhum.",
-    youtube: "-M6ZFsKDsgc",
-    category: "vertical-pull"
-  },
-  "Mergulho Banco": {
-    muscles: "Tríceps Braquial, Deltoide Anterior",
-    prep: "Substituído por Flexão Diamante na versão peso do corpo para evitar o uso de bancos ou cadeiras adicionais.",
-    exec: "Consulte as instruções da Flexão Diamante.",
-    tips: "Exercício alternativo sem uso de apoios adicionais.",
-    errors: "Nenhum.",
-    youtube: "TCVj8cliLNo",
-    category: "triceps-extension"
-  },
-  "Superman": {
-    muscles: "Eretores da Espinha, Glúteos",
-    prep: "Deite-se de bruços no solo, pernas estendidas e braços à frente.",
-    exec: "Erga braços e pernas mantendo a contração e retorne de forma lenta.",
-    tips: "Mantenha a cabeça alinhada com a coluna.",
-    errors: "Hiperestender excessivamente o pescoço.",
-    youtube: "17ElZ1pYuJE",
-    category: "hinge"
-  },
-  "Puxada Isométrica": {
-    muscles: "Latíssimo do Dorso, Romboides",
-    prep: "Em pé ou deitado, simule a puxada contraindo fortemente a musculatura dorsal.",
-    exec: "Realize o movimento contraindo as costas no ponto de esforço máximo.",
-    tips: "Mantenha as escápulas retraídas.",
-    errors: "Nenhum.",
-    youtube: "orSy9wcO2RY",
-    category: "vertical-pull"
-  },
-  "Retração Escapular": {
-    muscles: "Romboides, Trapézio",
-    prep: "Em pé ou deitado, posicione as escápulas e contraia.",
-    exec: "Aproxime as escápulas de forma voluntária por 2-3s.",
-    tips: "Foco no controle escapular.",
-    errors: "Nenhum.",
-    youtube: "RkX2mvZ_V8c",
-    category: "vertical-pull"
-  },
-  "Superset Ombros": {
-    muscles: "Deltoide Lateral, Deltoide Posterior, Trapézio",
-    prep: "Em pé com um halter em cada mão, joelhos levemente flexionados. Ao terminar a elevação lateral, sem descansar, incline o tronco a ~45° para a elevação posterior.",
-    exec: "1) Elevação lateral: eleve os halteres para os lados até a altura dos ombros e desça controlado. 2) Elevação posterior: com o tronco inclinado para a frente, eleve os halteres para os lados/trás, apertando as escápulas no topo. As duas partes formam 1 série do superset, sem descanso entre elas.",
-    tips: "Use uma carga mais leve na elevação posterior — o deltoide posterior é pequeno e fadiga rápido. Priorize amplitude e controle, não peso.",
-    errors: "Balançar o tronco (impulso) em qualquer uma das duas fases ou elevar os halteres acima da linha dos ombros.",
-    youtube: "nXxDgKRpgC0",
-    category: "shoulder-fly"
-  },
-  "Abdominal Infra": {
-    muscles: "Reto Abdominal (Inferior)",
-    prep: "Deite-se de costas no solo, mãos sob o quadril para apoiar a lombar.",
-    exec: "Eleve as pernas retas até a vertical e desça de forma controlada sem tocar o chão.",
-    tips: "Mantenha a lombar colada ao solo.",
-    errors: "Arquear as costas na descida.",
-    youtube: "ixJcUH8AlL8",
-    category: "core-plank"
-  }
-};
-function getBaseExerciseName(name) {
-  let clean = name.split(" — ")[0].trim();
-  clean = clean.replace(/\s*\(.*\)\s*/gi, "").trim();
-
-  // Supersets (checar primeiro: contêm substrings de nomes de exercícios individuais,
-  // então precisam ser identificados antes que os checks genéricos abaixo os capturem)
-  if (clean.includes("Superset: Elevação lateral na máquina")) return "Superset Ombros Máquina";
-  if (clean.includes("Superset: Elevação lateral")) return "Superset Ombros";
-
-  // Gym Machine Exercises
-  if (clean.includes("Supino na máquina")) return "Supino na Máquina";
-  if (clean.includes("Supino inclinado na máquina")) return "Supino Inclinado na Máquina";
-  if (clean.includes("Desenvolvimento na máquina")) return "Desenvolvimento na Máquina";
-  if (clean.includes("Elevação lateral na máquina")) return "Elevação Lateral na Máquina";
-  if (clean.includes("Tríceps no pulley")) return "Tríceps no Pulley";
-  if (clean.includes("Remada baixa")) return "Remada Baixa na Máquina";
-  if (clean.includes("Remada articulada")) return "Remada Articulada";
-  if (clean.includes("Puxada alta")) return "Puxada Alta no Pulley";
-  if (clean.includes("Rosca Scott")) return "Rosca Scott na Máquina";
-  if (clean.includes("Rosca no pulley")) return "Rosca no Pulley";
-  if (clean.includes("Leg press")) return "Leg Press 45°";
-  if (clean.includes("Cadeira extensora")) return "Cadeira Extensora";
-  if (clean.includes("Cadeira flexora")) return "Cadeira Flexora";
-  if (clean.includes("Elevação pélvica na máquina")) return "Elevação Pélvica na Máquina";
-  if (clean.includes("Gêmeos na máquina")) return "Gêmeos na Máquina";
-  if (clean.includes("Abdominal na máquina")) return "Abdominal na Máquina";
-
-  // Home/Dumbbell Exercises
-  if (clean.includes("Supino reto") || clean.includes("Supino no banco")) return "Supino Reto";
-  if (clean.includes("Supino inclinado")) return "Supino Inclinado";
-  if (clean.includes("Desenvolvimento")) return "Desenvolvimento";
-  if (clean.includes("Elevação lateral")) return "Elevação Lateral";
-  if (clean.includes("Tríceps francês") || clean.includes("Tríceps testa")) return "Tríceps Extensão";
-  if (clean.includes("Mergulho no banco")) return "Mergulho Banco";
-  if (clean.includes("Rosca direta") || clean.includes("Rosca alternada") || clean.includes("Rosca martelo")) return "Rosca Bíceps";
-  if (clean.includes("Remada curvada")) return "Remada Curvada";
-  if (clean.includes("Remada serrote")) return "Remada Serrote";
-  if (clean.includes("Barra fixa") || clean.includes("Puxada na barra")) return "Barra Fixa";
-  if (clean.includes("Pullover")) return "Pullover";
-  if (clean.includes("Agachamento búlgaro") || clean.includes("Afundo búlgaro")) return "Agachamento Búlgaro";
-  if (clean.includes("Agachamento goblet") || clean.includes("Agachamento livre")) return "Agachamento";
-  if (clean.includes("Afundo") || clean.includes("estacionário")) return "Afundo";
-  if (clean.includes("Terra romeno") || clean.includes("Stiff")) return "Terra Romeno";
-  if (clean.includes("Elevação de gêmeos") || clean.includes("Gêmeos")) return "Gêmeos";
-  if (clean.includes("Elevação pélvica") || clean.includes("Ponte de glúteo")) return "Elevação Pélvica";
-  if (clean.includes("Abdominal com halter")) return "Abdominal com Halter";
-  if (clean.includes("Russian twist")) return "Russian Twist com Halter";
-
-  // Bodyweight Exercises
-  if (clean.includes("Superman dinâmico")) return "Superman Dinâmico";
-  if (clean.includes("Puxada no chão")) return "Puxada no Chão";
-  if (clean.includes("Retração escapular no chão")) return "Retração Escapular no Chão";
-  if (clean.includes("Agachamento livre com pausa") || clean.includes("Agachamento com pausa")) return "Agachamento com Pausa";
-  if (clean.includes("Prancha abdominal") || clean.includes("Prancha com toque")) return "Prancha Abdominal";
-  if (clean.includes("Prancha lateral")) return "Prancha Lateral";
-  if (clean.includes("Flexão diamante")) return "Flexão Diamante";
-  if (clean.includes("Flexão pike elevada")) return "Flexão Pike Elevada";
-  if (clean.includes("Flexão pike")) return "Flexão Pike";
-  if (clean.includes("Flexão")) return "Flexão de Braço";
-  if (clean.includes("Anjo da neve invertido")) return "Anjo da Neve Invertido";
-  if (clean.includes("Remada australiana")) return "Remada Australiana";
-  if (clean.includes("Superman")) return "Superman";
-  if (clean.includes("Puxada isométrica")) return "Puxada Isométrica";
-  if (clean.includes("Retração escapular")) return "Retração Escapular";
-  if (clean.includes("Abdominal infra")) return "Abdominal Infra";
-  
-  return clean;
-}
-
-function parseExerciseName(full){
-  const parts = full.split(" — ");
-  return { base: parts[0], note: parts[1] ? parts[1].replace(/\s*\(fixo\)\s*/i,"") : null };
-}
-
-/* ======================= UTILIDADES DE DATA ======================= */
-function pad(n){return n<10?"0"+n:n;}
-function toISO(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());}
-function todayStr(){return toISO(new Date());}
-function weekdayOf(dateStr){return new Date(dateStr+"T00:00:00").getDay();}
-function addDays(dateStr,n){const d=new Date(dateStr+"T00:00:00");d.setDate(d.getDate()+n);return toISO(d);}
-function fmtBR(dateStr){const[y,m,d]=dateStr.split("-");return `${d}/${m}`;}
-
-function getPhase(dateStr){
-  return PHASES.find(p=>dateStr>=p.start && dateStr<=p.end) || null;
-}
-
-function getSessionInfo(dateStr){
-  const phase = getPhase(dateStr);
-  if(!phase){
-    if(dateStr < PHASES[0].start) return {outOfRange:"before"};
-    return {outOfRange:"after"};
-  }
-  let scheme = phase.scheme;
-  let submode = null;
-  if(phase.id === 5){
-    if(dateStr <= "2026-12-13") submode = "normal";
-    else if(dateStr <= "2026-12-20") submode = "deload";
-    else { submode = "survival"; scheme = "FULLBODY"; }
-  }
-  const wd = weekdayOf(dateStr);
-  let sessionType, isRest=false;
-  if(scheme === "UL"){
-    if(wd===0) isRest=true;
-    else sessionType = [1,3,5].includes(wd) ? "Superior" : "Inferior";
-  } else if(scheme === "PPL"){
-    if(wd===0) isRest=true;
-    else { const map={1:"Push",2:"Pull",3:"Legs",4:"Push",5:"Pull",6:"Legs"}; sessionType=map[wd]; }
-  } else if(scheme === "FULLBODY"){
-    if(wd===0) isRest=true;
-    else sessionType = "Corpo Inteiro";
-  }
-  const setsRepsKey = phase.id===5 ? `5-${submode}` : phase.id;
-  return {phase, scheme, sessionType, isRest, setsReps:SETSREPS[setsRepsKey], submode};
-}
-
-function exercisesFor(scheme, variant, sessionType){
-  if(scheme === "FULLBODY") return EXERCISES.FULLBODY[variant];
-  return EXERCISES[scheme][variant][sessionType];
-}
-
-/* ======================= ESTADO / STORAGE ======================= */
-const STORAGE_KEY = "treinoAppStateV1";
-let memoryFallback = null;
-
-function loadState(){
-  let raw = null;
-  try{ raw = localStorage.getItem(STORAGE_KEY); }catch(e){ raw = null; }
-  if(!raw && memoryFallback) raw = JSON.stringify(memoryFallback);
-  if(raw){
-    try{ return JSON.parse(raw); }catch(e){ /* fall through */ }
-  }
-  return {checkins:{}, selectedVariant:"academia", longestStreak:0, badgesEarned:[]};
-}
-function saveState(state){
-  memoryFallback = state;
-  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){ /* silent fallback to memory */ }
-}
-
-let state = loadState();
-
-/* ======================= STREAK / XP ======================= */
-function computeStreakEndingAt(dateStr, checkins){
-  let streak = 0;
-  let cursor = dateStr;
-  while(true){
-    const info = getSessionInfo(cursor);
-    if(info.outOfRange){ break; }
-    if(info.isRest){ cursor = addDays(cursor,-1); continue; }
-    if(checkins[cursor] && checkins[cursor].fullyCompleted !== false){ streak++; cursor = addDays(cursor,-1); }
-    else break;
-  }
-  return streak;
-}
-function totalXP(){
-  return Object.values(state.checkins).reduce((s,c)=>s+(c.xp||0),0);
-}
-function levelInfo(){
-  const xp = totalXP();
-  const level = 1 + Math.floor(xp/150);
-  const into = xp % 150;
-  return {xp, level, into, pct: Math.round(into/150*100)};
-}
-
-function toggleCheckin(dateStr){
-  if(state.checkins[dateStr] && state.checkins[dateStr].fullyCompleted !== false){
-    delete state.checkins[dateStr];
-  } else {
-    const info = getSessionInfo(dateStr);
-    if(!info || info.outOfRange || info.isRest) return;
-    const phaseIdx = info.phase.id - 1;
-    const streakSoFar = computeStreakEndingAt(addDays(dateStr,-1), state.checkins);
-    const xp = 20 + phaseIdx*5 + Math.min(streakSoFar+1,10)*2;
-    
-    // Mark all exercises as completed
-    const exList = exercisesFor(info.scheme, state.selectedVariant, info.sessionType) || [];
-    const completedList = exList.map(e => getBaseExerciseName(e));
-
-    state.checkins[dateStr] = {
-      variant: state.selectedVariant, 
-      sessionType: info.sessionType, 
-      phaseId: info.phase.id, 
-      xp,
-      completedExercises: completedList,
-      fullyCompleted: true
-    };
-  }
-  const curStreak = computeStreakEndingAt(todayStr(), state.checkins);
-  if(curStreak > (state.longestStreak||0)) state.longestStreak = curStreak;
-  saveState(state);
-  checkBadges();
-  renderAll();
-}
-
-function toggleExerciseCheck(dateStr, exFullName) {
-  const info = getSessionInfo(dateStr);
-  if(!info || info.outOfRange || info.isRest) return;
-  
-  const exCleanName = getBaseExerciseName(exFullName);
-  
-  if(!state.checkins[dateStr]) {
-    state.checkins[dateStr] = {
-      variant: state.selectedVariant,
-      sessionType: info.sessionType,
-      phaseId: info.phase.id,
-      xp: 0,
-      completedExercises: [],
-      fullyCompleted: false
-    };
-  }
-  
-  let checkin = state.checkins[dateStr];
-  if(!checkin.completedExercises) {
-    checkin.completedExercises = [];
-  }
-  
-  const idx = checkin.completedExercises.indexOf(exCleanName);
-  if(idx > -1) {
-    checkin.completedExercises.splice(idx, 1);
-  } else {
-    checkin.completedExercises.push(exCleanName);
-  }
-  
-  // Check if all exercises are now completed
-  const exList = exercisesFor(info.scheme, checkin.variant || state.selectedVariant, info.sessionType) || [];
-  const allNormalized = exList.map(e => getBaseExerciseName(e));
-  
-  const allDone = allNormalized.every(e => checkin.completedExercises.includes(e));
-  
-  if (allDone) {
-    const phaseIdx = info.phase.id - 1;
-    const streakSoFar = computeStreakEndingAt(addDays(dateStr,-1), state.checkins);
-    checkin.xp = 20 + phaseIdx*5 + Math.min(streakSoFar+1,10)*2;
-    checkin.fullyCompleted = true;
-    toast("🎉 Treino completo! Todos os exercícios concluídos!");
-  } else {
-    checkin.xp = checkin.completedExercises.length * 4;
-    checkin.fullyCompleted = false;
-  }
-  
-  if (checkin.completedExercises.length === 0) {
-    delete state.checkins[dateStr];
-  }
-  
-  const curStreak = computeStreakEndingAt(todayStr(), state.checkins);
-  if(curStreak > (state.longestStreak||0)) state.longestStreak = curStreak;
-  saveState(state);
-  checkBadges();
-  renderAll();
-}
-
-/* ======================= BADGES / TOAST ======================= */
-function checkBadges(){
-  const newly = [];
-  BADGES.forEach(b=>{
-    const unlocked = b.check(state);
-    const already = state.badgesEarned.includes(b.id);
-    if(unlocked && !already){ state.badgesEarned.push(b.id); newly.push(b); }
-  });
-  if(newly.length){ saveState(state); newly.forEach(b=>toast(`${b.icon} Conquista: ${b.label}`)); }
-}
-function toast(msg){
-  const wrap = document.getElementById("toastWrap");
-  const el = document.createElement("div");
-  el.className = "toast"; el.textContent = msg;
-  wrap.appendChild(el);
-  setTimeout(()=>el.remove(), 4200);
-}
-
-/* ======================= RENDER ======================= */
-function motivationalLine(streak){
-  if(streak===0) return "Hoje é um bom dia para começar (de novo).";
-  if(streak<3) return "Ritmo pegando. Segue assim.";
-  if(streak<7) return "Consistência à vista.";
-  if(streak<14) return "Uma semana inteira. Isso já é hábito.";
-  if(streak<30) return "Você está construindo algo sério aqui.";
-  return "Isso já não é força de vontade. É identidade.";
-}
-
-function renderHeader(){
-  const t = todayStr();
-  document.getElementById("dateLine").textContent = `${WEEKDAY_NAMES[weekdayOf(t)]}, ${fmtBR(t)}/2026`;
-  const streak = computeStreakEndingAt(t, state.checkins);
-  document.getElementById("streakChip").textContent = streak;
-  document.getElementById("levelChip").textContent = levelInfo().level;
-}
-
-function renderRail(){
-  const rail = document.getElementById("journeyRail");
-  const t = todayStr();
-  let html = "<h2>Fases</h2>";
-  PHASES.forEach((p,i)=>{
-    const cls = t>p.end ? "done" : (t>=p.start && t<=p.end ? "current" : "");
-    html += `<div class="phase-item ${cls}">
-      <div class="phase-dot">${t>p.end?"✓":p.id}</div>
-      <div class="phase-info"><div class="name">${p.name}</div><div class="dates">${fmtBR(p.start)}–${fmtBR(p.end)}</div></div>
-    </div>`;
-  });
-  rail.innerHTML = html;
-}
-
-function renderToday(){
-  const t = todayStr();
-  const info = getSessionInfo(t);
-  const card = document.getElementById("todayCard");
-  
-  const checkin = state.checkins[t];
-  const checkedIn = checkin && (checkin.fullyCompleted !== false);
-
-  if(info.outOfRange){
-    card.innerHTML = `<div class="card-body"><h2 class="session-title">Fora do período do plano</h2>
-    <p class="session-sub">Este plano cobre 06/07 a 31/12/2026.</p></div>`;
-    return;
-  }
-
-  const weekday = WEEKDAY_NAMES[weekdayOf(t)];
-  let stub = `<div class="stub">
-    <div class="weekday">${weekday.slice(0,3)}</div>
-    <div class="daynum">${t.split("-")[2]}</div>
-    <div class="month">${MONTH_NAMES[parseInt(t.split("-")[1])-1].slice(0,3)}</div>
-    <div class="phase-tag">Fase ${info.phase.id}</div>
-  </div>`;
-
-  let body = "";
-  if(info.isRest){
-    body = `<div class="card-body">
-      <h2 class="session-title">Dia de descanso</h2>
-      <p class="session-sub">Domingo · recuperação faz parte do plano</p>
-      <div class="rest-note">Sem treino hoje. Aproveite para dormir bem e chegar forte na segunda.</div>
-    </div>`;
-  } else {
-    const tabs = VARIANTS.map(([key,label])=>
-      `<button class="variant-tab ${state.selectedVariant===key?'active':''}" data-variant="${key}">${label}</button>`
-    ).join("");
-    
-    const completedExs = checkin?.completedExercises || [];
-    const list = exercisesFor(info.scheme, state.selectedVariant, info.sessionType)
-      .map((ex,i)=>{
-        const cleanName = getBaseExerciseName(ex);
-        const isDone = completedExs.includes(cleanName);
-        return `<li class="${isDone ? 'completed' : ''}">
-          <input type="checkbox" class="ex-checkbox" data-ex="${ex.replace(/"/g,'&quot;')}" ${isDone ? 'checked' : ''}>
-          <span class="n">${pad(i+1)}</span>
-          <button class="ex-link" data-exercise="${ex.replace(/"/g,'&quot;')}">
-            <span class="play">▶</span>${ex}
-          </button>
-        </li>`;
-      }).join("");
-      
-    const streak = computeStreakEndingAt(t, state.checkins);
-    body = `<div class="card-body">
-      <div class="stamp ${checkedIn?'show':''}" id="stampEl">TREINADO</div>
-      <h2 class="session-title">${info.sessionType}</h2>
-      <p class="session-sub">${info.setsReps}</p>
-      <div class="variant-tabs" id="variantTabs">${tabs}</div>
-      <ul class="exercise-list">${list}</ul>
-      <div class="check-row">
-        <button class="check-btn ${checkedIn?'done':''}" id="checkBtn">${checkedIn? '✓ Treino marcado' : 'Marquei o treino de hoje'}</button>
-        <span class="xp-hint">${motivationalLine(streak)}</span>
-      </div>
-    </div>`;
-  }
-  card.innerHTML = stub + body;
-
-  if(!info.isRest){
-    document.getElementById("checkBtn").addEventListener("click", ()=>toggleCheckin(t));
-    
-    document.querySelectorAll("#variantTabs .variant-tab").forEach(btn=>{
-      btn.addEventListener("click", ()=>{
-        state.selectedVariant = btn.dataset.variant;
-        saveState(state);
-        renderToday();
-      });
-    });
-    
-    document.querySelectorAll(".ex-link").forEach(btn=>{
-      btn.addEventListener("click", (e)=>{
-        e.stopPropagation();
-        openExerciseModal(btn.dataset.exercise);
-      });
-    });
-    
-    document.querySelectorAll(".ex-checkbox").forEach(chk=>{
-      chk.addEventListener("click", (e)=>{
-        e.stopPropagation();
-        toggleExerciseCheck(t, chk.dataset.ex);
-      });
-    });
-  }
-}
-
-/* ======================= MODAL DE EXERCÍCIO ======================= */
-let currentVideoId = "";
-
-function openExerciseModal(fullName){
-  const {base, note} = parseExerciseName(fullName);
-  document.getElementById("modalTitle").textContent = base;
-  
-  const normKey = getBaseExerciseName(fullName);
-  const details = EXERCISE_DETAILS[normKey] || {
-    muscles: "Geral",
-    prep: "Posicione-se confortavelmente para iniciar o exercício.",
-    exec: "Realize o exercício mantendo postura estável e cadência controlada.",
-    tips: "Mantenha o core sempre contraído e a técnica impecável.",
-    errors: "Realizar o movimento rápido demais sem controle na descida.",
-    youtube: "",
-    category: "default"
-  };
-
-  document.getElementById("modalMuscles").textContent = details.muscles;
-  document.getElementById("modalPrep").textContent = details.prep;
-  document.getElementById("modalExec").textContent = details.exec + (note ? ` Prescrição fixa: ${note}.` : "");
-  document.getElementById("modalTips").textContent = details.tips;
-  document.getElementById("modalErrors").textContent = details.errors;
-
-  const demoContainer = document.getElementById("demoVisualContainer");
-  demoContainer.innerHTML = getExerciseVisual(normKey, details.category);
-
-  currentVideoId = details.youtube;
-  const tabShowVideo = document.getElementById("tabShowVideo");
-  if (currentVideoId) {
-    tabShowVideo.style.display = "inline-flex";
-  } else {
-    tabShowVideo.style.display = "none";
-  }
-
-  const query = encodeURIComponent(`execução correta ${base}`);
-  const directLink = details.youtube 
-    ? `https://www.youtube.com/watch?v=${details.youtube}` 
-    : `https://www.youtube.com/results?search_query=${query}`;
-  document.getElementById("modalVideoDirectLink").href = directLink;
-
-  document.getElementById("tabShowDemo").click();
-  document.getElementById("tabShowGuide").click();
-  document.getElementById("exModal").classList.add("open");
-}
-
-function closeExerciseModal(){
-  document.getElementById("exModal").classList.remove("open");
-}
-
-document.getElementById("modalCloseBtn").addEventListener("click", closeExerciseModal);
-document.getElementById("exModal").addEventListener("click", (e)=>{
-  if(e.target.id === "exModal") closeExerciseModal();
-});
-document.addEventListener("keydown", (e)=>{
-  if(e.key === "Escape") closeExerciseModal();
-});
-
-function setupModalTabs() {
-  const tabShowDemo = document.getElementById("tabShowDemo");
-  const tabShowVideo = document.getElementById("tabShowVideo");
-  const demoVisualContainer = document.getElementById("demoVisualContainer");
-  const videoVisualContainer = document.getElementById("videoVisualContainer");
-
-  tabShowDemo.addEventListener("click", () => {
-    tabShowDemo.classList.add("active");
-    tabShowVideo.classList.remove("active");
-    demoVisualContainer.style.display = "flex";
-    videoVisualContainer.style.display = "none";
-  });
-
-  tabShowVideo.addEventListener("click", () => {
-    tabShowVideo.classList.add("active");
-    tabShowDemo.classList.remove("active");
-    demoVisualContainer.style.display = "none";
-    videoVisualContainer.style.display = "flex";
-  });
-
-  const tabShowGuide = document.getElementById("tabShowGuide");
-  const tabShowTips = document.getElementById("tabShowTips");
-  const guideContent = document.getElementById("guideContent");
-  const tipsContent = document.getElementById("tipsContent");
-
-  tabShowGuide.addEventListener("click", () => {
-    tabShowGuide.classList.add("active");
-    tabShowTips.classList.remove("active");
-    guideContent.style.display = "block";
-    tipsContent.style.display = "none";
-  });
-
-  tabShowTips.addEventListener("click", () => {
-    tabShowTips.classList.add("active");
-    tabShowGuide.classList.remove("active");
-    guideContent.style.display = "none";
-    tipsContent.style.display = "block";
-  });
-}
-
-function getExerciseVisual(normKey, category) {
-  if (normKey === "Supino na Máquina" || normKey === "Supino Inclinado na Máquina") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="45" y1="40" x2="45" y2="85" stroke="var(--hairline)" stroke-width="3" stroke-linecap="round"/>
-        <line x1="40" y1="85" x2="65" y2="85" stroke="var(--hairline)" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="48" cy="30" r="5" fill="var(--chalk)"/>
-        <line x1="48" y1="35" x2="48" y2="70" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <path d="M 48,70 L 65,70 L 65,85" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path class="mach-press-arm" d="M 48,45 L 68,45" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-        <line class="mach-press-handle" x1="68" y1="35" x2="68" y2="55" stroke="var(--ember)" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-    `;
-  } else if (normKey === "Puxada Alta no Pulley") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="30" y1="100" x2="65" y2="100" stroke="var(--hairline)" stroke-width="3"/>
-        <path d="M 35,100 L 35,70 L 50,70" fill="none" stroke="var(--hairline)" stroke-width="2"/>
-        <circle cx="45" cy="45" r="5.5" fill="var(--chalk)"/>
-        <line x1="45" y1="51" x2="45" y2="85" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <path d="M 45,85 L 55,85 L 55,100" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path class="pulldown-arms" d="M 45,55 L 35,25 M 45,55 L 55,25" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-        <line class="pulldown-bar" x1="30" y1="25" x2="60" y2="25" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-    `;
-  } else if (normKey === "Remada Baixa na Máquina" || normKey === "Remada Articulada") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="85" y1="40" x2="85" y2="85" stroke="var(--hairline)" stroke-width="2"/>
-        <line x1="30" y1="80" x2="70" y2="80" stroke="var(--hairline)" stroke-width="3"/>
-        <circle cx="45" cy="45" r="5.5" fill="var(--chalk)"/>
-        <path class="rower-torso" d="M 45,51 L 45,80" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <path d="M 45,80 L 85,80" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-        <line class="rower-cable" x1="85" y1="60" x2="55" y2="60" stroke="var(--hairline)" stroke-width="1.5"/>
-        <path class="rower-arms" d="M 45,55 L 55,60" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle class="rower-handle" cx="55" cy="60" r="3" fill="var(--ember)"/>
-      </svg>
-    `;
-  } else if (normKey === "Leg Press 45°") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="20" y1="85" x2="55" y2="50" stroke="var(--hairline)" stroke-width="3" stroke-linecap="round"/>
-        <line x1="15" y1="85" x2="80" y2="85" stroke="var(--hairline)" stroke-width="2"/>
-        <circle cx="58" cy="46" r="5" fill="var(--chalk)"/>
-        <line x1="55" y1="52" x2="35" y2="72" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <path class="legpress-legs" d="M 35,72 L 65,55 L 85,35" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        <g class="legpress-plate-g">
-          <line x1="75" y1="45" x2="95" y2="25" stroke="var(--ember)" stroke-width="4" stroke-linecap="round"/>
-        </g>
-      </svg>
-    `;
-  } else if (normKey === "Cadeira Extensora") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="20" y1="80" x2="60" y2="80" stroke="var(--hairline)" stroke-width="3"/>
-        <line x1="30" y1="80" x2="30" y2="40" stroke="var(--hairline)" stroke-width="3"/>
-        <circle cx="33" cy="30" r="5.5" fill="var(--chalk)"/>
-        <line x1="33" y1="36" x2="33" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <line x1="33" y1="80" x2="60" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <path class="leg-ext-shin" d="M 60,80 L 60,110" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round"/>
-        <circle class="leg-ext-pad" cx="60" cy="107" r="4.5" fill="var(--ember)"/>
-      </svg>
-    `;
-  } else if (normKey === "Cadeira Flexora") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="20" y1="80" x2="60" y2="80" stroke="var(--hairline)" stroke-width="3"/>
-        <line x1="30" y1="80" x2="30" y2="40" stroke="var(--hairline)" stroke-width="3"/>
-        <circle cx="33" cy="30" r="5.5" fill="var(--chalk)"/>
-        <line x1="33" y1="36" x2="33" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <line x1="33" y1="80" x2="60" y2="80" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <path class="leg-curl-shin" d="M 60,80 L 90,80" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round"/>
-        <circle class="leg-curl-pad" cx="87" cy="80" r="4.5" fill="var(--ember)"/>
-      </svg>
-    `;
-  } else if (normKey === "Desenvolvimento na Máquina") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="45" y1="60" x2="45" y2="110" stroke="var(--hairline)" stroke-width="3"/>
-        <line x1="30" y1="110" x2="60" y2="110" stroke="var(--hairline)" stroke-width="3"/>
-        <circle cx="50" cy="50" r="5.5" fill="var(--chalk)"/>
-        <line x1="50" y1="56" x2="50" y2="90" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <path class="mach-shpress-arms" d="M 50,65 L 65,45" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-        <line class="mach-shpress-bar" x1="55" y1="45" x2="75" y2="45" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-    `;
-  }
-
-  if (normKey === "Flexão de Braço" || normKey === "Flexão Diamante" || normKey === "Mergulho Banco") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="10" y1="85" x2="110" y2="85" stroke="var(--hairline)" stroke-width="2"/>
-        <path class="pushup-arms" d="M 35,85 L 30,70 L 40,65" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path class="pushup-body" d="M 90,80 L 40,65" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <circle class="pushup-head" cx="33" cy="62" r="5" fill="var(--chalk)"/>
-      </svg>
-    `;
-  } else if (normKey === "Flexão Pike") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="10" y1="90" x2="110" y2="90" stroke="var(--hairline)" stroke-width="2"/>
-        <path class="pike-legs" d="M 80,90 L 60,50" fill="none" stroke="var(--mist)" stroke-width="4" stroke-linecap="round"/>
-        <path class="pike-torso" d="M 60,50 L 40,70" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <circle class="pike-head" cx="37" cy="74" r="5" fill="var(--chalk)"/>
-        <path class="pike-arms" d="M 40,90 L 40,70" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    `;
-  } else if (normKey === "Remada Australiana") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="10" y1="90" x2="110" y2="90" stroke="var(--hairline)" stroke-width="2"/>
-        <line x1="60" y1="45" x2="60" y2="90" stroke="var(--hairline)" stroke-width="2"/>
-        <circle cx="60" cy="45" r="4" fill="var(--ember)"/>
-        <path class="invrow-body" d="M 30,90 L 80,75" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <circle class="invrow-head" cx="85" cy="73" r="5" fill="var(--chalk)"/>
-        <path class="invrow-arms" d="M 60,45 L 70,78" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    `;
-  } else if (normKey === "Superman" || normKey === "Superman Dinâmico" || normKey === "Puxada no Chão" || normKey === "Retração Escapular no Chão") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="10" y1="75" x2="110" y2="75" stroke="var(--hairline)" stroke-width="2"/>
-        <path class="superman-body" d="M 60,73 L 40,73" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <circle class="superman-head" cx="35" cy="73" r="4.5" fill="var(--chalk)"/>
-        <path class="superman-arms" d="M 40,73 L 20,73" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-        <path class="superman-legs" d="M 60,73 L 85,73" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-      </svg>
-    `;
-  } else if (normKey === "Puxada Isométrica") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="20" y1="110" x2="80" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <line x1="50" y1="110" x2="50" y2="85" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-        <line x1="50" y1="85" x2="50" y2="50" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <circle cx="50" cy="42" r="5.5" fill="var(--chalk)"/>
-        <path class="towel-arms" d="M 46,55 L 35,30 M 54,55 L 65,30" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-        <path class="towel-line" d="M 33,30 L 67,30" fill="none" stroke="var(--ember)" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-    `;
-  } else if (normKey === "Retração Escapular") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="50" y1="15" x2="50" y2="110" stroke="var(--hairline)" stroke-width="2" stroke-dasharray="3 3"/>
-        <circle cx="50" cy="35" r="6" fill="var(--chalk)"/>
-        <line x1="50" y1="41" x2="50" y2="85" stroke="var(--chalk)" stroke-width="5" stroke-linecap="round"/>
-        <path class="slide-arms" d="M 50,48 L 38,62 L 32,48 M 50,48 L 62,62 L 68,48" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    `;
-  } else if (normKey === "Abdominal Infra") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="10" y1="85" x2="110" y2="85" stroke="var(--hairline)" stroke-width="2"/>
-        <path d="M 30,81 L 70,81" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-        <circle cx="24" cy="80" r="5" fill="var(--chalk)"/>
-        <path class="raise-legs" d="M 70,81 L 105,81" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round"/>
-      </svg>
-    `;
-  }
-
-  if (category === "squat") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="10" y1="110" x2="90" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <path class="squat-legs" d="M 50,110 L 50,75 L 50,45" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="squat-torso" d="M 50,45 L 48,15" fill="none" stroke="var(--chalk)" stroke-width="5" stroke-linecap="round"/>
-          <circle class="squat-head" cx="48" cy="8" r="6" fill="var(--chalk)"/>
-          <path class="squat-bar" d="M 35,20 L 61,20" fill="none" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-          <circle class="squat-weight-l" cx="35" cy="20" r="4.5" fill="var(--ember)"/>
-          <circle class="squat-weight-r" cx="61" cy="20" r="4.5" fill="var(--ember)"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "horizontal-press") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="25" y1="75" x2="95" y2="75" stroke="var(--hairline)" stroke-width="3" stroke-linecap="round"/>
-        <line x1="40" y1="75" x2="40" y2="92" stroke="var(--hairline)" stroke-width="2"/>
-        <line x1="80" y1="75" x2="80" y2="92" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <path class="press-legs" d="M 45,73 L 40,92" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-          <path class="press-torso" d="M 45,71 L 85,71" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="91" cy="71" r="5" fill="var(--chalk)"/>
-          <path class="press-arm" d="M 80,71 L 80,45" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="press-bar" d="M 65,45 L 95,45" fill="none" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-          <circle class="press-w1" cx="65" cy="45" r="4.5" fill="var(--ember)"/>
-          <circle class="press-w2" cx="95" cy="45" r="4.5" fill="var(--ember)"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "vertical-press") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <path d="M 35,110 L 35,55 L 50,55" fill="none" stroke="var(--hairline)" stroke-width="2" stroke-linejoin="round"/>
-        <line x1="50" y1="85" x2="50" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <path class="vpress-legs" d="M 38,85 L 58,85 L 58,110" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="vpress-torso" d="M 38,85 L 38,50" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="38" cy="43" r="5" fill="var(--chalk)"/>
-          <path class="vpress-arm" d="M 38,52 L 48,25" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="vpress-db" d="M 42,25 L 54,25" fill="none" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-          <circle class="vpress-w1" cx="42" cy="25" r="3.5" fill="var(--ember)"/>
-          <circle class="vpress-w2" cx="54" cy="25" r="3.5" fill="var(--ember)"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "horizontal-pull") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="10" y1="110" x2="90" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <path class="row-legs" d="M 50,110 L 46,80 L 52,55" fill="none" stroke="var(--mist)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="row-torso" d="M 52,55 L 75,45" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="81" cy="43" r="5.5" fill="var(--chalk)"/>
-          <path class="row-arm" d="M 72,46 L 72,76" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <g class="row-db-g">
-            <line x1="64" y1="76" x2="80" y2="76" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-            <circle class="row-w1" cx="64" cy="76" r="4" fill="var(--ember)"/>
-            <circle class="row-w2" cx="80" cy="76" r="4" fill="var(--ember)"/>
-          </g>
-        </g>
-      </svg>
-    `;
-  } else if (category === "vertical-pull") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="15" y1="20" x2="85" y2="20" stroke="var(--hairline)" stroke-width="3"/>
-        <g>
-          <path class="pullup-arms" d="M 35,20 L 40,45 L 45,55 M 65,20 L 60,45 L 55,55" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="pullup-torso" d="M 50,55 L 50,90" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <path class="pullup-legs" d="M 50,90 L 45,110" fill="none" stroke="var(--mist)" stroke-width="3" stroke-linecap="round"/>
-          <circle class="pullup-head" cx="50" cy="47" r="5.5" fill="var(--chalk)"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "lunge") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="10" y1="110" x2="90" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <path class="lunge-leg-front" d="M 30,110 L 40,78 L 50,45" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="lunge-leg-back" d="M 65,110 L 58,78 L 50,45" fill="none" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="lunge-torso" d="M 50,45 L 50,15" fill="none" stroke="var(--chalk)" stroke-width="5" stroke-linecap="round"/>
-          <circle class="lunge-head" cx="50" cy="8" r="6" fill="var(--chalk)"/>
-          <line class="lunge-db" x1="42" y1="35" x2="58" y2="35" stroke="var(--ember)" stroke-width="2.5" stroke-linecap="round"/>
-          <circle class="lunge-w1" cx="42" cy="35" r="3.5" fill="var(--ember)"/>
-          <circle class="lunge-w2" cx="58" cy="35" r="3.5" fill="var(--ember)"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "hinge") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="10" y1="110" x2="90" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <path class="hinge-legs" d="M 50,110 L 50,80 L 50,50" fill="none" stroke="var(--mist)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="hinge-torso" d="M 50,50 L 50,18" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle class="hinge-head" cx="50" cy="10" r="5.5" fill="var(--chalk)"/>
-          <path class="hinge-arm" d="M 50,22 L 50,52" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-          <g class="hinge-bar-g">
-            <line x1="38" y1="52" x2="62" y2="52" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-            <circle class="hinge-w1" cx="38" cy="52" r="5" fill="var(--ember)"/>
-            <circle class="hinge-w2" cx="62" cy="52" r="5" fill="var(--ember)"/>
-          </g>
-        </g>
-      </svg>
-    `;
-  } else if (category === "hip-thrust") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <rect x="15" y="70" width="25" height="25" fill="none" stroke="var(--hairline)" stroke-width="2" rx="4"/>
-        <line x1="10" y1="95" x2="110" y2="95" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <line x1="65" y1="95" x2="65" y2="75" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-          <path class="thrust-thigh" d="M 65,75 L 45,95" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path class="thrust-torso" d="M 45,95 L 40,75" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle class="thrust-head" cx="38" cy="67" r="5" fill="var(--chalk)"/>
-          <circle class="thrust-w" cx="52" cy="90" r="5.5" fill="var(--ember)"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "biceps-curl") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="20" y1="110" x2="80" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <line x1="50" y1="110" x2="50" y2="85" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="50" y1="85" x2="50" y2="45" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="50" cy="37" r="5.5" fill="var(--chalk)"/>
-          <path class="curl-arm" d="M 50,47 L 50,67 L 50,77" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <g class="curl-db-g">
-            <line x1="42" y1="77" x2="58" y2="77" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-            <circle class="curl-w1" cx="42" cy="77" r="3.5" fill="var(--ember)"/>
-            <circle class="curl-w2" cx="58" cy="77" r="3.5" fill="var(--ember)"/>
-          </g>
-        </g>
-      </svg>
-    `;
-  } else if (category === "triceps-extension") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="20" y1="110" x2="80" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <line x1="50" y1="110" x2="50" y2="85" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="50" y1="85" x2="50" y2="45" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="50" cy="37" r="5.5" fill="var(--chalk)"/>
-          <path class="triceps-arm" d="M 50,47 L 48,17 L 48,8" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <g class="triceps-db-g">
-            <line x1="40" y1="8" x2="56" y2="8" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
-            <circle class="triceps-w1" cx="40" cy="8" r="3.5" fill="var(--ember)"/>
-            <circle class="triceps-w2" cx="56" cy="8" r="3.5" fill="var(--ember)"/>
-          </g>
-        </g>
-      </svg>
-    `;
-  } else if (category === "core-plank") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="10" y1="80" x2="110" y2="80" stroke="var(--hairline)" stroke-width="2"/>
-        <line x1="35" y1="80" x2="35" y2="68" stroke="var(--mist)" stroke-width="3.5" stroke-linecap="round"/>
-        <g>
-          <path class="plank-body" d="M 85,78 L 35,68" fill="none" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="28" cy="65" r="5" fill="var(--chalk)"/>
-          <circle class="plank-core-glow" cx="60" cy="73" r="7" fill="var(--ember)" opacity="0.4"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "shoulder-fly") {
-    return `
-      <svg viewBox="0 0 120 100" class="ex-svg">
-        <line x1="30" y1="95" x2="90" y2="95" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <line x1="60" y1="95" x2="60" y2="70" stroke="var(--mist)" stroke-width="3.5"/>
-          <line x1="60" y1="70" x2="60" y2="40" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="60" cy="32" r="5.5" fill="var(--chalk)"/>
-          <path class="fly-arm-l" d="M 57,42 L 35,70" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-          <path class="fly-arm-r" d="M 63,42 L 85,70" fill="none" stroke="var(--chalk)" stroke-width="3" stroke-linecap="round"/>
-          <circle class="fly-w-l" cx="35" cy="70" r="3.5" fill="var(--ember)"/>
-          <circle class="fly-w-r" cx="85" cy="70" r="3.5" fill="var(--ember)"/>
-        </g>
-      </svg>
-    `;
-  } else if (category === "calf") {
-    return `
-      <svg viewBox="0 0 100 120" class="ex-svg">
-        <line x1="10" y1="110" x2="90" y2="110" stroke="var(--hairline)" stroke-width="2"/>
-        <g>
-          <path class="calf-leg" d="M 50,110 L 50,75 L 50,45" fill="none" stroke="var(--chalk)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="50" y1="45" x2="50" y2="15" stroke="var(--chalk)" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="50" cy="8" r="5.5" fill="var(--chalk)"/>
-          <path class="arrow-up" d="M 30,105 L 30,90 M 27,94 L 30,90 L 33,94" fill="none" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </svg>
-    `;
-  }
-  return `
-    <svg viewBox="0 0 100 100" class="ex-svg">
-      <circle cx="50" cy="50" r="30" fill="none" stroke="var(--hairline)" stroke-width="4"/>
-      <path d="M 50,30 L 50,70 M 30,50 L 70,50" stroke="var(--ember)" stroke-width="4" stroke-linecap="round"/>
-    </svg>
-  `;
-}
-
-function renderStats(){
-  const row = document.getElementById("statsRow");
-  const t = todayStr();
-  const streak = computeStreakEndingAt(t, state.checkins);
-  const li = levelInfo();
-  const total = Object.keys(state.checkins).length;
-  row.innerHTML = `
-    <div class="stat-card"><div class="label">Sequência atual</div><div class="value">${streak}</div></div>
-    <div class="stat-card"><div class="label">Maior sequência</div><div class="value">${state.longestStreak||0}</div></div>
-    <div class="stat-card"><div class="label">Total de treinos</div><div class="value">${total}</div></div>
-    <div class="stat-card"><div class="label">Nível ${li.level} · ${li.xp} XP</div>
-      <div class="level-bar"><div class="level-bar-fill" style="width:${li.pct}%"></div></div>
-    </div>`;
-}
-
-function renderCalendar(){
-  const grid = document.getElementById("monthsGrid");
-  const t = todayStr();
-  let html = "";
-  for(let m=7; m<=12; m++){
-    const first = new Date(2026, m-1, 1);
-    const daysInMonth = new Date(2026, m, 0).getDate();
-    const startOffset = first.getDay();
-    html += `<div class="month-block"><div class="month-title">${MONTH_NAMES[m-1]}</div>
-      <div class="week-header"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
-      <div class="week-row" style="grid-template-columns:repeat(7,1fr);display:grid;">`;
-    for(let i=0;i<startOffset;i++) html += `<div class="day-cell empty"></div>`;
-    for(let d=1; d<=daysInMonth; d++){
-      const dateStr = `2026-${pad(m)}-${pad(d)}`;
-      const info = getSessionInfo(dateStr);
-      let cls = "day-cell";
-      if(dateStr > t) cls += " future";
-      else if(info.isRest) cls += " rest";
-      else if(state.checkins[dateStr]) {
-        if (state.checkins[dateStr].fullyCompleted === false) {
-          cls += " in-progress";
-        } else {
-          cls += " trained";
-        }
-      }
-      else cls += " missed";
-      if(dateStr === t) cls += " is-today";
-      html += `<div class="${cls}" data-date="${dateStr}" title="${dateStr}">${d}</div>`;
-    }
-    html += `</div></div>`;
-  }
-  grid.innerHTML = html;
-  grid.querySelectorAll(".day-cell:not(.empty):not(.future)").forEach(cell=>{
-    cell.addEventListener("click", ()=>toggleCheckin(cell.dataset.date));
-  });
-}
-
-function renderBadges(){
-  const grid = document.getElementById("badgesGrid");
-  grid.innerHTML = BADGES.map(b=>{
-    const unlocked = state.badgesEarned.includes(b.id);
-    return `<div class="badge ${unlocked?'unlocked':''}">
-      <div class="icon">${b.icon}</div>
-      <div class="label">${b.label}</div>
-      <div class="desc">${b.desc}</div>
-    </div>`;
-  }).join("");
-}
-
-function renderAll(){
-  renderHeader();
-  renderRail();
-  renderToday();
-  renderStats();
-  renderCalendar();
-  renderBadges();
-}
-setupModalTabs();
-renderAll();
-checkBadges();
-
-/* ======================= RESET ======================= */
-document.getElementById("resetBtn").addEventListener("click", ()=>{
-  if(confirm("Isso vai apagar todo o seu progresso registrado. Tem certeza?")){
-    state = {checkins:{}, selectedVariant:"academia", longestStreak:0, badgesEarned:[]};
-    saveState(state);
     renderAll();
   }
 });
